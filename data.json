@@ -1,0 +1,6783 @@
+{
+  "next_id": 1069,
+  "years": [
+    {
+      "id": 1,
+      "name": "Year 1",
+      "income": [
+        {
+          "id": 1,
+          "name": "Maintenance loan",
+          "amount_yr": 9914.0
+        },
+        {
+          "id": 2,
+          "name": "Sheffield bursary",
+          "amount_yr": 500.0
+        },
+        {
+          "id": 3,
+          "name": "Ga",
+          "amount_yr": 1200.0
+        },
+        {
+          "id": 4,
+          "name": "Mum",
+          "amount_yr": 360.0
+        },
+        {
+          "id": 5,
+          "name": "Hannah",
+          "amount_yr": 300.0
+        },
+        {
+          "id": 6,
+          "name": "Scholarship",
+          "amount_yr": 2000.0
+        },
+        {
+          "id": 7,
+          "name": "Grandad",
+          "amount_yr": 360.0
+        }
+      ],
+      "expenses": [
+        {
+          "id": 8,
+          "name": "Accommodation",
+          "amount_yr": 7155.96,
+          "note": null
+        },
+        {
+          "id": 9,
+          "name": "Deposit",
+          "amount_yr": 150.0,
+          "note": null
+        },
+        {
+          "id": 10,
+          "name": "Estimate groceries",
+          "amount_yr": 800.0,
+          "note": "*"
+        },
+        {
+          "id": 11,
+          "name": "Subs (amazon, RHS, Spotify)",
+          "amount_yr": 151.37,
+          "note": null
+        },
+        {
+          "id": 12,
+          "name": "Christmas home and back",
+          "amount_yr": 40.0,
+          "note": null
+        }
+      ],
+      "schedules": {
+        "accommodation_payments": [
+          "1st Oct 2024 - £2628.71",
+          "22nd Jan 2025 - £2604.38",
+          "30th April 2025 - £1922.86"
+        ],
+        "maintenance_loan_in": [
+          "30th Sep 2024 - £3271.62",
+          "20th Jan 2025 - £3,271.62",
+          "28th April 2025 - £3,370.76"
+        ],
+        "scholarship_in": [
+          "Friday 1st November 2024",
+          "Monday 10th February 2025"
+        ]
+      },
+      "scholarship_note": "(1200 across)",
+      "notes": [
+        "*guess / approx",
+        "*Note with groceries, home about 17 weeks of the year (12 summer + 3 christmas), maybe a little more, so only need groceries for about 46 weeks.",
+        "Spend about £20 per week on food (including getting food out)."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Year 2",
+      "income": [
+        {
+          "id": 20,
+          "name": "Initial Account (end Sep)",
+          "amount_yr": 1514.0
+        },
+        {
+          "id": 21,
+          "name": "Maintenance loan",
+          "amount_yr": 10001.0
+        },
+        {
+          "id": 22,
+          "name": "Sheffield bursary",
+          "amount_yr": 500.0
+        },
+        {
+          "id": 23,
+          "name": "Ga",
+          "amount_yr": 1200.0
+        },
+        {
+          "id": 24,
+          "name": "Hannah",
+          "amount_yr": 300.0
+        },
+        {
+          "id": 25,
+          "name": "Scholarship",
+          "amount_yr": 1680.0
+        },
+        {
+          "id": 26,
+          "name": "Grandad",
+          "amount_yr": 360.0
+        }
+      ],
+      "expenses": [
+        {
+          "id": 27,
+          "name": "Accommodation",
+          "amount_yr": 5738.55,
+          "note": null
+        },
+        {
+          "id": 28,
+          "name": "Deposit",
+          "amount_yr": 99.0,
+          "note": null
+        },
+        {
+          "id": 29,
+          "name": "Estimate groceries",
+          "amount_yr": 750.0,
+          "note": "*"
+        },
+        {
+          "id": 30,
+          "name": "Subs (amazon, Spotify)",
+          "amount_yr": 151.37,
+          "note": null
+        },
+        {
+          "id": 31,
+          "name": "Christmas home and back",
+          "amount_yr": 50.0,
+          "note": null
+        },
+        {
+          "id": 32,
+          "name": "Laundry",
+          "amount_yr": 150.0,
+          "note": null
+        },
+        {
+          "id": 33,
+          "name": "Tattoo",
+          "amount_yr": 1150.0,
+          "note": null
+        }
+      ],
+      "schedules": {
+        "accommodation_payments": [
+          "23rd Aug 2025 - £1912.85",
+          "1st Jan - £1912.85",
+          "1st April - £1912.85"
+        ],
+        "maintenance_loan_in": [
+          "29th Sep 2025 - £3300.33",
+          "19th Jan 2026 - £3300.33",
+          "20th April 2026 - £3,400.34"
+        ],
+        "scholarship_in": [
+          "Monday 27th October 2025",
+          "Monday 2nd March 2026"
+        ]
+      },
+      "scholarship_note": "(1200 across)",
+      "notes": [
+        "*guess / approx"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Year 3",
+      "income": [
+        {
+          "id": 40,
+          "name": "Initial Account (end Sep)",
+          "amount_yr": 11613.0
+        },
+        {
+          "id": 41,
+          "name": "Maintenance loan",
+          "amount_yr": 9365.0
+        },
+        {
+          "id": 42,
+          "name": "Sheffield bursary",
+          "amount_yr": 500.0
+        },
+        {
+          "id": 43,
+          "name": "Ga",
+          "amount_yr": 1200.0
+        },
+        {
+          "id": 44,
+          "name": "Hannah",
+          "amount_yr": 300.0
+        },
+        {
+          "id": 45,
+          "name": "Scholarship",
+          "amount_yr": 1200.0
+        },
+        {
+          "id": 46,
+          "name": "Grandad",
+          "amount_yr": 360.0
+        }
+      ],
+      "expenses": [
+        {
+          "id": 47,
+          "name": "Accommodation",
+          "amount_yr": 5738.55,
+          "note": null
+        },
+        {
+          "id": 48,
+          "name": "Estimate groceries",
+          "amount_yr": 750.0,
+          "note": "*"
+        },
+        {
+          "id": 49,
+          "name": "Subs (amazon, Spotify)",
+          "amount_yr": 151.37,
+          "note": null
+        },
+        {
+          "id": 50,
+          "name": "Christmas home and back",
+          "amount_yr": 50.0,
+          "note": null
+        },
+        {
+          "id": 51,
+          "name": "Laundry",
+          "amount_yr": 150.0,
+          "note": null
+        },
+        {
+          "id": 52,
+          "name": "Learning to drive",
+          "amount_yr": 2000.0,
+          "note": null
+        }
+      ],
+      "schedules": {
+        "accommodation_payments": [
+          "23/08/2026 - £1,912.85",
+          "01/01/2027 - £1,912.86",
+          "04/01/2027 - £1,894.29"
+        ],
+        "maintenance_loan_in": [
+          "28th Sep 2025 - £3,090.45",
+          "18th Jan 2026 - £3,090.45",
+          "12th April 2026 - £3,184.10"
+        ],
+        "scholarship_in": []
+      },
+      "scholarship_note": "(1200 across)",
+      "notes": [
+        "*guess / approx",
+        "Reminder: update maintenance loan + initial in + accom + when scholarship confirmed."
+      ]
+    }
+  ],
+  "todo_days": [
+    {
+      "id": 100,
+      "date": "2025-08-06",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 101,
+          "text": "finish finance and all that for y2",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "date": "2025-08-07",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 103,
+      "date": "2025-08-08",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 104,
+          "text": "zeren's birthday!! text",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "date": "2025-08-09",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 106,
+          "text": "look into credit cards",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "date": "2025-08-10",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 108,
+          "text": "pay straits manor rent",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "date": "2025-08-11",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 110,
+      "date": "2025-08-12",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 111,
+      "date": "2025-08-13",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 112,
+          "text": "poppy's birthday!! text",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "date": "2025-08-14",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 114,
+          "text": "make SSI whats coming post",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "date": "2025-08-15",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 116,
+      "date": "2025-08-16",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 117,
+          "text": "conner's birthday!! text",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "date": "2025-08-17",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 119,
+          "text": "phone detox day",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 120,
+          "text": "tina's birthday bbq",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "date": "2025-08-18",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 122,
+      "date": "2025-08-19",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 123,
+          "text": "go for a walk",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 124,
+          "text": "tidy room",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "date": "2025-08-20",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 126,
+          "text": "post SSI whats coming post",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "date": "2025-08-21",
+      "day_name": "thu",
+      "theme": "frollicking",
+      "tasks": [
+        {
+          "id": 128,
+          "text": "prep for reading! pack day bag, plan outfit. Tissues, power pack n cable, water, snacks",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "date": "2025-08-22",
+      "day_name": "fri",
+      "theme": "forest lesbian",
+      "tasks": [
+        {
+          "id": 130,
+          "text": "reading festival",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "date": "2025-08-23",
+      "day_name": "sat",
+      "theme": "space",
+      "tasks": [
+        {
+          "id": 132,
+          "text": "make SSI astro announcement post (same as what want from -  add to?)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 133,
+          "text": "update ssi su page",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "date": "2025-08-24",
+      "day_name": "sun",
+      "theme": "frog",
+      "tasks": [
+        {
+          "id": 135,
+          "text": "make first astrophysics presentation",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 136,
+          "text": "make sure ssi rooms n fair booked",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "date": "2025-08-25",
+      "day_name": "mon",
+      "theme": "pirate",
+      "tasks": [
+        {
+          "id": 138,
+          "text": "make next astrophysics presentations",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "date": "2025-08-26",
+      "day_name": "tue",
+      "theme": "shark",
+      "tasks": []
+    },
+    {
+      "id": 140,
+      "date": "2025-08-27",
+      "day_name": "wed",
+      "theme": "Blackberry",
+      "tasks": [
+        {
+          "id": 141,
+          "text": "post astro announcement!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 142,
+          "text": "check toaster n kettle in loft",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "date": "2025-08-28",
+      "day_name": "thu",
+      "theme": "Wanderlust",
+      "tasks": [
+        {
+          "id": 144,
+          "text": "make meet the committee post preliminary",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 145,
+          "text": "make membership posts",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "date": "2025-08-29",
+      "day_name": "fri",
+      "theme": "Soup",
+      "tasks": [
+        {
+          "id": 147,
+          "text": "make session 1 posts (astronomy and rocketry)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 148,
+          "text": "post memberships countdown",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "date": "2025-08-30",
+      "day_name": "sat",
+      "theme": "Meadow",
+      "tasks": [
+        {
+          "id": 150,
+          "text": "make ssi stickers",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 151,
+          "text": "david character sheet",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "date": "2025-08-31",
+      "day_name": "sun",
+      "theme": "Acorn",
+      "tasks": []
+    },
+    {
+      "id": 153,
+      "date": "2025-09-01",
+      "day_name": "mon",
+      "theme": "Lantern",
+      "tasks": [
+        {
+          "id": 154,
+          "text": "post memberships live post",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "date": "2025-09-02",
+      "day_name": "tue",
+      "theme": "Goose",
+      "tasks": []
+    },
+    {
+      "id": 156,
+      "date": "2025-09-03",
+      "day_name": "wed",
+      "theme": "Snail",
+      "tasks": [
+        {
+          "id": 157,
+          "text": "make activity fair story",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "date": "2025-09-04",
+      "day_name": "thu",
+      "theme": "Thistle",
+      "tasks": []
+    },
+    {
+      "id": 159,
+      "date": "2025-09-05",
+      "day_name": "fri",
+      "theme": "Moth",
+      "tasks": []
+    },
+    {
+      "id": 160,
+      "date": "2025-09-06",
+      "day_name": "sat",
+      "theme": "Cloudberry",
+      "tasks": []
+    },
+    {
+      "id": 161,
+      "date": "2025-09-07",
+      "day_name": "sun",
+      "theme": "Hearth",
+      "tasks": []
+    },
+    {
+      "id": 162,
+      "date": "2025-09-08",
+      "day_name": "mon",
+      "theme": "Clover",
+      "tasks": []
+    },
+    {
+      "id": 163,
+      "date": "2025-09-09",
+      "day_name": "tue",
+      "theme": "Velvet",
+      "tasks": [
+        {
+          "id": 164,
+          "text": "Make Adam bday card/smth",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 165,
+      "date": "2025-09-10",
+      "day_name": "wed",
+      "theme": "Cricket",
+      "tasks": []
+    },
+    {
+      "id": 166,
+      "date": "2025-09-11",
+      "day_name": "thu",
+      "theme": "Puddle",
+      "tasks": [
+        {
+          "id": 167,
+          "text": "fill up spice pots for uni + PACK KNIFE",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "date": "2025-09-12",
+      "day_name": "fri",
+      "theme": "Harvest",
+      "tasks": []
+    },
+    {
+      "id": 169,
+      "date": "2025-09-13",
+      "day_name": "sat",
+      "theme": "Mushroom",
+      "tasks": [
+        {
+          "id": 170,
+          "text": "pack and up to sheff - bring toilet roll!",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 171,
+      "date": "2025-09-14",
+      "day_name": "sun",
+      "theme": "Apple-crisp",
+      "tasks": [
+        {
+          "id": 172,
+          "text": "sort jewellry and clothes",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 173,
+          "text": "make sure ssi posts n bits are ready",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 174,
+      "date": "2025-09-15",
+      "day_name": "mon",
+      "theme": "Candlewax",
+      "tasks": [
+        {
+          "id": 175,
+          "text": "Pick up updated UCard for SSID",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 176,
+          "text": "laundry",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 177,
+      "date": "2025-09-16",
+      "day_name": "tue",
+      "theme": "Dandelion",
+      "tasks": []
+    },
+    {
+      "id": 178,
+      "date": "2025-09-17",
+      "day_name": "wed",
+      "theme": "Jigsaw",
+      "tasks": [
+        {
+          "id": 179,
+          "text": "revise more",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 180,
+      "date": "2025-09-18",
+      "day_name": "thu",
+      "theme": "Gooseberry",
+      "tasks": [
+        {
+          "id": 181,
+          "text": "prep for sunride avi interviews",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 182,
+      "date": "2025-09-19",
+      "day_name": "fri",
+      "theme": "Bonfire",
+      "tasks": []
+    },
+    {
+      "id": 183,
+      "date": "2025-09-20",
+      "day_name": "sat",
+      "theme": "Inkcap (Tattoo Day)",
+      "tasks": [
+        {
+          "id": 184,
+          "text": "Tattoo 2 :)",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 185,
+      "date": "2025-09-21",
+      "day_name": "sun",
+      "theme": "Conker",
+      "tasks": [
+        {
+          "id": 186,
+          "text": "October's n Quinn's birthday",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 187,
+      "date": "2025-09-22",
+      "day_name": "mon",
+      "theme": "Balance (Autumn Equinox)",
+      "tasks": [
+        {
+          "id": 188,
+          "text": "Post activity fair story",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 189,
+          "text": "get Ranudi's bday date",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 190,
+      "date": "2025-09-23",
+      "day_name": "tue",
+      "theme": "Crow",
+      "tasks": [
+        {
+          "id": 191,
+          "text": "SSI meet the committe pics n post",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 192,
+      "date": "2025-09-24",
+      "day_name": "wed",
+      "theme": "Cinnamon",
+      "tasks": [
+        {
+          "id": 193,
+          "text": "help adan cut stickers",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 194,
+      "date": "2025-09-25",
+      "day_name": "thu",
+      "theme": "Briar",
+      "tasks": [
+        {
+          "id": 195,
+          "text": "SSI talk (1:30 to aerospace) / societies fair",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 196,
+      "date": "2025-09-26",
+      "day_name": "fri",
+      "theme": "Keyring",
+      "tasks": [
+        {
+          "id": 197,
+          "text": "SELSA activity day thing",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 198,
+          "text": "ask about telescope storage hawley",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 199,
+      "date": "2025-09-27",
+      "day_name": "sat",
+      "theme": "Fern",
+      "tasks": [
+        {
+          "id": 200,
+          "text": "give tanya bows",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 201,
+      "date": "2025-09-28",
+      "day_name": "sun",
+      "theme": "Quilt",
+      "tasks": [
+        {
+          "id": 202,
+          "text": "make lidya bday stuff",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 203,
+      "date": "2025-09-29",
+      "day_name": "mon",
+      "theme": "Mossy",
+      "tasks": [
+        {
+          "id": 204,
+          "text": "buy Sky-Watcher Heritage-100P Tabletop Dobsonian",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 205,
+          "text": "check ssi post has gone n make story at 12",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 206,
+          "text": "check over ssi presentation n add qr",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 207,
+      "date": "2025-09-30",
+      "day_name": "tue",
+      "theme": "Thimble",
+      "tasks": [
+        {
+          "id": 208,
+          "text": "statics tut sheet",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 209,
+          "text": "post reminder for newletter tmr!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 210,
+          "text": "put calc in bag",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 211,
+      "date": "2025-10-01",
+      "day_name": "wed",
+      "theme": "Marigold",
+      "tasks": [
+        {
+          "id": 212,
+          "text": "ssi session 1",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 213,
+          "text": "post monthly newsletter",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 214,
+          "text": "fin slide 16 and problem 2 tut sheet 1 electrical",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 215,
+      "date": "2025-10-02",
+      "day_name": "thu",
+      "theme": "Apple",
+      "tasks": [
+        {
+          "id": 216,
+          "text": "ssi session 1 thank you post",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 217,
+          "text": "ecg",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 218,
+          "text": "embedded systems tut sheet",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 219,
+          "text": "email astronomy outreach",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 220,
+      "date": "2025-10-03",
+      "day_name": "fri",
+      "theme": "Owl",
+      "tasks": [
+        {
+          "id": 221,
+          "text": "watch electrical yt vids",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 222,
+          "text": "group project plan / gantt chart",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 223,
+          "text": "research drone stuff + read through docs",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 224,
+      "date": "2025-10-04",
+      "day_name": "sat",
+      "theme": "Lantern-glow",
+      "tasks": [
+        {
+          "id": 225,
+          "text": "start looking into summer and year placements",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 226,
+      "date": "2025-10-05",
+      "day_name": "sun",
+      "theme": "Hedgehog",
+      "tasks": [
+        {
+          "id": 227,
+          "text": "submit selsa talk form things",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 228,
+          "text": "update schedule for next 2 weeks",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 229,
+      "date": "2025-10-06",
+      "day_name": "mon",
+      "theme": "Cobweb",
+      "tasks": [
+        {
+          "id": 230,
+          "text": "ask mohhamed if formula sheet in exam only this year s1 and s2, or also the ones from last year",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 231,
+          "text": "ssi session 2 post - update time",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 232,
+      "date": "2025-10-07",
+      "day_name": "tue",
+      "theme": "Pinecone",
+      "tasks": [
+        {
+          "id": 233,
+          "text": "go over content for star talk",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 234,
+      "date": "2025-10-08",
+      "day_name": "wed",
+      "theme": "Fiddlefern",
+      "tasks": [
+        {
+          "id": 235,
+          "text": "ssi session 2",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 236,
+          "text": "check if have circe for tanya",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 237,
+      "date": "2025-10-09",
+      "day_name": "thu",
+      "theme": "Bonfire-smoke",
+      "tasks": [
+        {
+          "id": 238,
+          "text": "submit SoW, project plan and risk register",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 239,
+          "text": "women in engineering talk 6pm",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 240,
+          "text": "sodlering training 3:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 241,
+      "date": "2025-10-10",
+      "day_name": "fri",
+      "theme": "Whisper",
+      "tasks": [
+        {
+          "id": 242,
+          "text": "Embeddded programming quiz 1",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 243,
+          "text": "sunride interview 4:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 244,
+      "date": "2025-10-11",
+      "day_name": "sat",
+      "theme": "Acorn-cap",
+      "tasks": [
+        {
+          "id": 245,
+          "text": "ssi session 3 slides",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 246,
+          "text": "ssi sessions 3 art (astro n rocket)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 247,
+          "text": "haircut",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 248,
+      "date": "2025-10-12",
+      "day_name": "sun",
+      "theme": "Mushroom-ring",
+      "tasks": [
+        {
+          "id": 249,
+          "text": "sketches + research for drone",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 250,
+          "text": "make tanya dnd sheet + print hers and davids",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 251,
+          "text": "SSI Astro 3 kahoot",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 252,
+      "date": "2025-10-13",
+      "day_name": "mon",
+      "theme": "Daydream",
+      "tasks": [
+        {
+          "id": 253,
+          "text": "post ssi session 3 post + messages (whatsapp and discord)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 254,
+          "text": "electrical quiz 1,2,3, 4",
+          "due": "27/10",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 255,
+      "date": "2025-10-14",
+      "day_name": "tue",
+      "theme": "Foxglove",
+      "tasks": [
+        {
+          "id": 256,
+          "text": "2nd sunride interview",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 257,
+          "text": "fin maths tut",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 258,
+      "date": "2025-10-15",
+      "day_name": "wed",
+      "theme": "Brioche",
+      "tasks": [
+        {
+          "id": 259,
+          "text": "ssi session 3",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 260,
+          "text": "get tickets for Saturday",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 261,
+      "date": "2025-10-16",
+      "day_name": "thu",
+      "theme": "Gourd",
+      "tasks": [
+        {
+          "id": 262,
+          "text": "6-7pm SELSA networking",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 263,
+      "date": "2025-10-17",
+      "day_name": "fri",
+      "theme": "Meadowlark",
+      "tasks": [
+        {
+          "id": 264,
+          "text": "drone project sketches",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 265,
+          "text": "Maths quiz 1",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 266,
+      "date": "2025-10-18",
+      "day_name": "sat",
+      "theme": "Rosehip",
+      "tasks": [
+        {
+          "id": 267,
+          "text": "amy birthday night out",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 268,
+      "date": "2025-10-19",
+      "day_name": "sun",
+      "theme": "Poppy",
+      "tasks": [
+        {
+          "id": 269,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 270,
+          "text": "thermo quizes 1",
+          "due": "30/10",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 271,
+      "date": "2025-10-20",
+      "day_name": "mon",
+      "theme": "Frosted-grass",
+      "tasks": []
+    },
+    {
+      "id": 272,
+      "date": "2025-10-21",
+      "day_name": "tue",
+      "theme": "Rook",
+      "tasks": [
+        {
+          "id": 273,
+          "text": "buckling prelab",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 274,
+      "date": "2025-10-22",
+      "day_name": "wed",
+      "theme": "Lantern-light",
+      "tasks": [
+        {
+          "id": 275,
+          "text": "ssi session 4",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 276,
+          "text": "11am-3pm employability hub <3space - MEng",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 277,
+          "text": "drone design submit",
+          "due": "24/10",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 278,
+      "date": "2025-10-23",
+      "day_name": "thu",
+      "theme": "Goblin",
+      "tasks": [
+        {
+          "id": 279,
+          "text": "drone project meeting 11:30-1",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 280,
+          "text": "sunride welcome meeting 6-8pm",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 281,
+          "text": "buggy project meeting 2-3",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 282,
+      "date": "2025-10-24",
+      "day_name": "fri",
+      "theme": "Cauldron",
+      "tasks": [
+        {
+          "id": 283,
+          "text": "prep ssi session 5 (INCL KAHOOT)",
+          "due": "29/10",
+          "done": true
+        },
+        {
+          "id": 284,
+          "text": "GP online training",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 285,
+          "text": "update buggy diagram - power AND signal lines",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 286,
+      "date": "2025-10-25",
+      "day_name": "sat",
+      "theme": "Potion",
+      "tasks": [
+        {
+          "id": 287,
+          "text": "Submit sunride SELSA form if in",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 288,
+          "text": "start applying for summer interships etc",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 289,
+          "text": "tattoo",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 290,
+      "date": "2025-10-26",
+      "day_name": "sun",
+      "theme": "Clockwork (Clocks change)",
+      "tasks": [
+        {
+          "id": 291,
+          "text": "post ssi posts",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 292,
+          "text": "altium / PCB sunride training",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 293,
+          "text": "maths and structures LT notes",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 294,
+      "date": "2025-10-27",
+      "day_name": "mon",
+      "theme": "Gargoyle",
+      "tasks": [
+        {
+          "id": 295,
+          "text": "make november newsletter",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 296,
+          "text": "bending prelab",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 297,
+          "text": "technical meeting 6-7pm hicks LT5",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 298,
+      "date": "2025-10-28",
+      "day_name": "tue",
+      "theme": "Batwing",
+      "tasks": [
+        {
+          "id": 299,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 300,
+          "text": "buggy design submit",
+          "due": "29th",
+          "done": true
+        },
+        {
+          "id": 301,
+          "text": "embedded programming quiz 2",
+          "due": "11/03/2025",
+          "done": true
+        },
+        {
+          "id": 302,
+          "text": "ssi meeting 9am",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 303,
+      "date": "2025-10-29",
+      "day_name": "wed",
+      "theme": "Candle",
+      "tasks": [
+        {
+          "id": 304,
+          "text": "ssi session 5",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 305,
+          "text": "ask about n book straits next year",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 306,
+          "text": "find halloween bunting for tanya",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 307,
+      "date": "2025-10-30",
+      "day_name": "thu",
+      "theme": "Spindle",
+      "tasks": [
+        {
+          "id": 308,
+          "text": "Paul's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 309,
+          "text": "post reminder for newletter tmr!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 310,
+          "text": "6-7pm sunride CAD",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 311,
+          "text": "reflash armadillos 12pm GP",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 312,
+      "date": "2025-10-31",
+      "day_name": "fri",
+      "theme": "Pumpkin (Halloween 🎃)",
+      "tasks": [
+        {
+          "id": 313,
+          "text": "Halloween party",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 314,
+          "text": "post monthly newsletter",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 315,
+      "date": "2025-11-01",
+      "day_name": "sat",
+      "theme": "Allspice",
+      "tasks": [
+        {
+          "id": 316,
+          "text": "MAKE DAVID CARD",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 317,
+          "text": "cad drone arms, send to print",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 318,
+      "date": "2025-11-02",
+      "day_name": "sun",
+      "theme": "Wisp",
+      "tasks": [
+        {
+          "id": 319,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 320,
+          "text": "cad avi bay",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 321,
+      "date": "2025-11-03",
+      "day_name": "mon",
+      "theme": "Enigma",
+      "tasks": [
+        {
+          "id": 322,
+          "text": "ssi session 6 post",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 323,
+          "text": "PREP SSI SESSION 6",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 324,
+          "text": "aeromap buddy check",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 325,
+      "date": "2025-11-04",
+      "day_name": "tue",
+      "theme": "Spark",
+      "tasks": [
+        {
+          "id": 326,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 327,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 328,
+      "date": "2025-11-05",
+      "day_name": "wed",
+      "theme": "Firework (Bonfire Night 🎆)",
+      "tasks": [
+        {
+          "id": 329,
+          "text": "ssi session 6",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 330,
+          "text": "nathan bonfire thing",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 331,
+          "text": "orthodontics 3:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 332,
+      "date": "2025-11-06",
+      "day_name": "thu",
+      "theme": "Starfall",
+      "tasks": [
+        {
+          "id": 333,
+          "text": "fantasy grapefruit",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 334,
+          "text": "submit final design slidepack",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 335,
+          "text": "tattoo finish",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 336,
+      "date": "2025-11-07",
+      "day_name": "fri",
+      "theme": "Maple",
+      "tasks": [
+        {
+          "id": 337,
+          "text": "maths quiz 2 +3",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 338,
+          "text": "snapdragon livery sketches",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 339,
+          "text": "buggy meeting",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 340,
+      "date": "2025-11-08",
+      "day_name": "sat",
+      "theme": "Ash-tree",
+      "tasks": [
+        {
+          "id": 341,
+          "text": "add stuff to RS Student fund application for avi",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 342,
+          "text": "snapdragon livery printable",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 343,
+      "date": "2025-11-09",
+      "day_name": "sun",
+      "theme": "Stag",
+      "tasks": [
+        {
+          "id": 344,
+          "text": "Thermo quiz 2",
+          "due": "20th",
+          "done": true
+        },
+        {
+          "id": 345,
+          "text": "look over UKROC stuffs",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 346,
+          "text": "ssi trip planning (NSC, stars)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 347,
+          "text": "ssi nw posts make",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 348,
+      "date": "2025-11-10",
+      "day_name": "mon",
+      "theme": "Rootbeer",
+      "tasks": [
+        {
+          "id": 349,
+          "text": "technical meeting 6-7pm hicks LT5",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 350,
+          "text": "natural frequency prelab",
+          "due": "13th",
+          "done": true
+        },
+        {
+          "id": 351,
+          "text": "ssi session 7 post (CHECK ALL GOOD)",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 352,
+      "date": "2025-11-11",
+      "day_name": "tue",
+      "theme": "Poppy-petal (Remembrance Day)",
+      "tasks": [
+        {
+          "id": 353,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 354,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 355,
+          "text": "ssi session 7 big kahoot quiz",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 356,
+          "text": "ssi sunride meeting",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 357,
+      "date": "2025-11-12",
+      "day_name": "wed",
+      "theme": "Blanket",
+      "tasks": [
+        {
+          "id": 358,
+          "text": "ssi session 7",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 359,
+          "text": "set up email signature",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 360,
+      "date": "2025-11-13",
+      "day_name": "thu",
+      "theme": "Toadstool",
+      "tasks": [
+        {
+          "id": 361,
+          "text": "skyrora slide sunride",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 362,
+          "text": "embedded quiz 3",
+          "due": "21st",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 363,
+      "date": "2025-11-14",
+      "day_name": "fri",
+      "theme": "Moss",
+      "tasks": [
+        {
+          "id": 364,
+          "text": "robot buggy practical",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 365,
+          "text": "email sponsors for sunride",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 366,
+          "text": "make / check ssi posts nw",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 367,
+      "date": "2025-11-15",
+      "day_name": "sat",
+      "theme": "Riddle",
+      "tasks": [
+        {
+          "id": 368,
+          "text": "Various tutorials (elec, struct)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 369,
+          "text": "astrobiology talk ssi",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 370,
+      "date": "2025-11-16",
+      "day_name": "sun",
+      "theme": "Wren",
+      "tasks": [
+        {
+          "id": 371,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 372,
+      "date": "2025-11-17",
+      "day_name": "mon",
+      "theme": "Ember",
+      "tasks": [
+        {
+          "id": 373,
+          "text": "Print hawkeye bits at iforge",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 374,
+          "text": "vibrating beam prelab",
+          "due": "20th",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 375,
+      "date": "2025-11-18",
+      "day_name": "tue",
+      "theme": "Starling",
+      "tasks": [
+        {
+          "id": 376,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 377,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 378,
+          "text": "pickup hawkeye bits",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 379,
+      "date": "2025-11-19",
+      "day_name": "wed",
+      "theme": "Mulberry",
+      "tasks": [
+        {
+          "id": 380,
+          "text": "ssi session 8",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 381,
+          "text": "fix Orphaned Filamentative post",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 382,
+          "text": "do better on thermo quizes during lunch",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 383,
+      "date": "2025-11-20",
+      "day_name": "thu",
+      "theme": "Cranberry",
+      "tasks": [
+        {
+          "id": 384,
+          "text": "birthday :D",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 385,
+      "date": "2025-11-21",
+      "day_name": "fri",
+      "theme": "Frost",
+      "tasks": [
+        {
+          "id": 386,
+          "text": "5-box submit",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 387,
+          "text": "electrical quizes",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 388,
+          "text": "redo gp quizes",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 389,
+      "date": "2025-11-22",
+      "day_name": "sat",
+      "theme": "Icicle",
+      "tasks": [
+        {
+          "id": 390,
+          "text": "ssi space center trip",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 391,
+          "text": "thermo quiz 3",
+          "due": "12/04/2025",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 392,
+      "date": "2025-11-23",
+      "day_name": "sun",
+      "theme": "Wreath",
+      "tasks": [
+        {
+          "id": 393,
+          "text": "ssi posts for nw",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 394,
+      "date": "2025-11-24",
+      "day_name": "mon",
+      "theme": "Candlelight",
+      "tasks": [
+        {
+          "id": 395,
+          "text": "technical meeting 6-7pm hicks LT5",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 396,
+          "text": "get superglue",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 397,
+          "text": "more internships",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 398,
+      "date": "2025-11-25",
+      "day_name": "tue",
+      "theme": "Robin",
+      "tasks": [
+        {
+          "id": 399,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 400,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 401,
+      "date": "2025-11-26",
+      "day_name": "wed",
+      "theme": "Spice",
+      "tasks": [
+        {
+          "id": 402,
+          "text": "ssi session 9",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 403,
+          "text": "finish booking accom - check right room",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 404,
+      "date": "2025-11-27",
+      "day_name": "thu",
+      "theme": "Nutmeg",
+      "tasks": [
+        {
+          "id": 405,
+          "text": "vibrating beam online lab +",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 406,
+          "text": "structures postlab 20%",
+          "due": "19/12",
+          "done": true
+        },
+        {
+          "id": 407,
+          "text": "UKROC at girls school",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 408,
+      "date": "2025-11-28",
+      "day_name": "fri",
+      "theme": "Sleighbell",
+      "tasks": [
+        {
+          "id": 409,
+          "text": "buggy code",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 410,
+      "date": "2025-11-29",
+      "day_name": "sat",
+      "theme": "Pine",
+      "tasks": [
+        {
+          "id": 411,
+          "text": "potential sunride girlies namsong",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 412,
+      "date": "2025-11-30",
+      "day_name": "sun",
+      "theme": "Advent",
+      "tasks": [
+        {
+          "id": 413,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 414,
+          "text": "ssi posts for nw",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 415,
+          "text": "make and send Ga card",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 416,
+      "date": "2025-12-01",
+      "day_name": "mon",
+      "theme": "Holly",
+      "tasks": [
+        {
+          "id": 417,
+          "text": "add to reece foundation doc if needed",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 418,
+          "text": "add more to filamentive post?",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 419,
+          "text": "christmas cards",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 420,
+      "date": "2025-12-02",
+      "day_name": "tue",
+      "theme": "Mistletoe",
+      "tasks": [
+        {
+          "id": 421,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 422,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 423,
+          "text": "Motion of Spheres Through Liquids online lab",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 424,
+      "date": "2025-12-03",
+      "day_name": "wed",
+      "theme": "Evergreen",
+      "tasks": [
+        {
+          "id": 425,
+          "text": "email ssi slides",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 426,
+      "date": "2025-12-04",
+      "day_name": "thu",
+      "theme": "Snowdrop",
+      "tasks": [
+        {
+          "id": 427,
+          "text": "ssi session 10",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 428,
+      "date": "2025-12-05",
+      "day_name": "fri",
+      "theme": "Icicle-song",
+      "tasks": [
+        {
+          "id": 429,
+          "text": "thermo quiz 4",
+          "due": "12/12/2025",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 430,
+      "date": "2025-12-06",
+      "day_name": "sat",
+      "theme": "Snowdrift",
+      "tasks": [
+        {
+          "id": 431,
+          "text": "BAE online interview",
+          "due": "12/12/2025",
+          "done": true
+        },
+        {
+          "id": 432,
+          "text": "ssi stargazing prep (post, risk assess, su form)",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 433,
+      "date": "2025-12-07",
+      "day_name": "sun",
+      "theme": "Crumpet",
+      "tasks": [
+        {
+          "id": 434,
+          "text": "MRC Sunride launch",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 435,
+          "text": "drone presentation slides",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 436,
+          "text": "maths lecture from mon",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 437,
+      "date": "2025-12-08",
+      "day_name": "mon",
+      "theme": "Gingerbread",
+      "tasks": [
+        {
+          "id": 438,
+          "text": "technical meeting 6-7pm hicks LT5",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 439,
+          "text": "Cross Flow Heat Transfer pre-lab",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 440,
+          "text": "11:40 flight test",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 441,
+          "text": "have a look at presentation slides",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 442,
+      "date": "2025-12-09",
+      "day_name": "tue",
+      "theme": "Tinsel",
+      "tasks": [
+        {
+          "id": 443,
+          "text": "Ga's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 444,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 445,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 446,
+          "text": "ZEREN HERE",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 447,
+      "date": "2025-12-10",
+      "day_name": "wed",
+      "theme": "Carol",
+      "tasks": [
+        {
+          "id": 448,
+          "text": "Eddie's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 449,
+          "text": "forum christmas quiz",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 450,
+          "text": "flat dinner 5pm the museum",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 451,
+          "text": "drone presentation meeting",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 452,
+      "date": "2025-12-11",
+      "day_name": "thu",
+      "theme": "Fir-tree",
+      "tasks": [
+        {
+          "id": 453,
+          "text": "Cross Flow Heat Transfer Lab 10am",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 454,
+      "date": "2025-12-12",
+      "day_name": "fri",
+      "theme": "Star",
+      "tasks": []
+    },
+    {
+      "id": 455,
+      "date": "2025-12-13",
+      "day_name": "sat",
+      "theme": "Solstice-flame",
+      "tasks": [
+        {
+          "id": 456,
+          "text": "drone lessons learnt log",
+          "due": "19/12",
+          "done": true
+        },
+        {
+          "id": 457,
+          "text": "stargazing trip",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 458,
+          "text": "sunride outreach slides thingy",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 459,
+      "date": "2025-12-14",
+      "day_name": "sun",
+      "theme": "Frostbite",
+      "tasks": [
+        {
+          "id": 460,
+          "text": "10-11:30 group presentation prep",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 461,
+      "date": "2025-12-15",
+      "day_name": "mon",
+      "theme": "Blizzard",
+      "tasks": [
+        {
+          "id": 462,
+          "text": "9am drone presentation room 201",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 463,
+          "text": "drone buddy check",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 464,
+          "text": "check about guarantor stuff straits",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 465,
+      "date": "2025-12-16",
+      "day_name": "tue",
+      "theme": "Northstar",
+      "tasks": [
+        {
+          "id": 466,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 467,
+          "text": "ask about sunide mission patch (?) drawing thing at outreach",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 468,
+      "date": "2025-12-17",
+      "day_name": "wed",
+      "theme": "Jolly",
+      "tasks": [
+        {
+          "id": 469,
+          "text": "Robot buggy software submit",
+          "due": "18/12",
+          "done": true
+        },
+        {
+          "id": 470,
+          "text": "robot buggy individual contribution submit",
+          "due": "17th",
+          "done": true
+        },
+        {
+          "id": 471,
+          "text": "robot buggy peer assessment submit",
+          "due": "17th",
+          "done": true
+        },
+        {
+          "id": 472,
+          "text": "tanya n david christmassing",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 473,
+      "date": "2025-12-18",
+      "day_name": "thu",
+      "theme": "Peppermint",
+      "tasks": [
+        {
+          "id": 474,
+          "text": "Raven's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 475,
+          "text": "Last christmas hang at davids",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 476,
+          "text": "SELSA my skills thing",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 477,
+      "date": "2025-12-19",
+      "day_name": "fri",
+      "theme": "Poinsettia",
+      "tasks": [
+        {
+          "id": 478,
+          "text": "finish of that last thermo quiz 4 question",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 479,
+          "text": "PACK",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 480,
+      "date": "2025-12-20",
+      "day_name": "sat",
+      "theme": "Yule",
+      "tasks": [
+        {
+          "id": 481,
+          "text": "travel home for christmas",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 482,
+      "date": "2025-12-21",
+      "day_name": "sun",
+      "theme": "Solstice (Winter Solstice 🌌)",
+      "tasks": [
+        {
+          "id": 483,
+          "text": "make an 'our teams' showcase post",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 484,
+      "date": "2025-12-22",
+      "day_name": "mon",
+      "theme": "Fircone",
+      "tasks": [
+        {
+          "id": 485,
+          "text": "prep astro stuff for next year",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 486,
+          "text": "clean up L4C docs",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 487,
+          "text": "embedded programming assignment",
+          "due": "30/1",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 488,
+      "date": "2025-12-23",
+      "day_name": "tue",
+      "theme": "Cranberry",
+      "tasks": [
+        {
+          "id": 489,
+          "text": "ride the cyclone",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 490,
+          "text": "electrical online lab",
+          "due": "02/06/2025",
+          "done": true
+        },
+        {
+          "id": 491,
+          "text": "sunride drawing mission patch thingy",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 492,
+      "date": "2025-12-24",
+      "day_name": "wed",
+      "theme": "Starlight",
+      "tasks": [
+        {
+          "id": 493,
+          "text": "christmas eve",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 494,
+          "text": "induction machines post lab",
+          "due": "02/11/2025",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 495,
+      "date": "2025-12-25",
+      "day_name": "thu",
+      "theme": "Christmas 🎄",
+      "tasks": [
+        {
+          "id": 496,
+          "text": "christmas!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 497,
+          "text": "maths quizes",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 498,
+      "date": "2025-12-26",
+      "day_name": "fri",
+      "theme": "Bauble",
+      "tasks": [
+        {
+          "id": 499,
+          "text": "boxing day",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 500,
+      "date": "2025-12-27",
+      "day_name": "sat",
+      "theme": "Hot choc",
+      "tasks": []
+    },
+    {
+      "id": 501,
+      "date": "2025-12-28",
+      "day_name": "sun",
+      "theme": "Mincepie",
+      "tasks": [
+        {
+          "id": 502,
+          "text": "Pay rent",
+          "due": "01/01/2025",
+          "done": true
+        },
+        {
+          "id": 503,
+          "text": "finish of n check business cards ssi",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 504,
+      "date": "2025-12-29",
+      "day_name": "mon",
+      "theme": "Icicle-drip",
+      "tasks": [
+        {
+          "id": 505,
+          "text": "christmas at Ga's",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 506,
+      "date": "2025-12-30",
+      "day_name": "tue",
+      "theme": "Sled",
+      "tasks": []
+    },
+    {
+      "id": 507,
+      "date": "2025-12-31",
+      "day_name": "wed",
+      "theme": "Firework (New Year’s Eve 🎆)",
+      "tasks": []
+    },
+    {
+      "id": 508,
+      "date": "2026-01-01",
+      "day_name": "thu",
+      "theme": "New Dawn (New Year’s Day ✨)",
+      "tasks": [
+        {
+          "id": 509,
+          "text": "New years day",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 510,
+      "date": "2026-01-02",
+      "day_name": "fri",
+      "theme": "Snowfall",
+      "tasks": [
+        {
+          "id": 511,
+          "text": "loner bench pub",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 512,
+      "date": "2026-01-03",
+      "day_name": "sat",
+      "theme": "Hibernation",
+      "tasks": [
+        {
+          "id": 513,
+          "text": "adam here :D",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 514,
+      "date": "2026-01-04",
+      "day_name": "sun",
+      "theme": "Frosted-leaf",
+      "tasks": []
+    },
+    {
+      "id": 515,
+      "date": "2026-01-05",
+      "day_name": "mon",
+      "theme": "Blanket",
+      "tasks": []
+    },
+    {
+      "id": 516,
+      "date": "2026-01-06",
+      "day_name": "tue",
+      "theme": "Candlemas",
+      "tasks": []
+    },
+    {
+      "id": 517,
+      "date": "2026-01-07",
+      "day_name": "wed",
+      "theme": "Sparrow",
+      "tasks": []
+    },
+    {
+      "id": 518,
+      "date": "2026-01-08",
+      "day_name": "thu",
+      "theme": "Snowdrop",
+      "tasks": [
+        {
+          "id": 519,
+          "text": "send off ENVEA info",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 520,
+      "date": "2026-01-09",
+      "day_name": "fri",
+      "theme": "Ember",
+      "tasks": []
+    },
+    {
+      "id": 521,
+      "date": "2026-01-10",
+      "day_name": "sat",
+      "theme": "Mittens",
+      "tasks": [
+        {
+          "id": 522,
+          "text": "travel back to sheffield",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 523,
+          "text": "tanya carrot bday cake + card",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 524,
+      "date": "2026-01-11",
+      "day_name": "sun",
+      "theme": "Pine-scent",
+      "tasks": [
+        {
+          "id": 525,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 526,
+          "text": "register to vote in sheffield",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 527,
+      "date": "2026-01-12",
+      "day_name": "mon",
+      "theme": "Chime",
+      "tasks": [
+        {
+          "id": 528,
+          "text": "altium pcb training - ask about lisence stuff",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 529,
+      "date": "2026-01-13",
+      "day_name": "tue",
+      "theme": "Winter aconite",
+      "tasks": [
+        {
+          "id": 530,
+          "text": "cat cafe with adam",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 531,
+          "text": "apply more summer internships",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 532,
+      "date": "2026-01-14",
+      "day_name": "wed",
+      "theme": "Hearthfire",
+      "tasks": [
+        {
+          "id": 533,
+          "text": "orthodontics 9:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 534,
+          "text": "make appointment about allergies / ezema / breathing",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 535,
+      "date": "2026-01-15",
+      "day_name": "thu",
+      "theme": "Iris reticulata",
+      "tasks": []
+    },
+    {
+      "id": 536,
+      "date": "2026-01-16",
+      "day_name": "fri",
+      "theme": "Icicle",
+      "tasks": [
+        {
+          "id": 537,
+          "text": "9:30 UHS skin/allergies appointment",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 538,
+      "date": "2026-01-17",
+      "day_name": "sat",
+      "theme": "Porridge",
+      "tasks": [
+        {
+          "id": 539,
+          "text": "revision with friends",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 540,
+      "date": "2026-01-18",
+      "day_name": "sun",
+      "theme": "Crumble",
+      "tasks": [
+        {
+          "id": 541,
+          "text": "revise statics n dynamics",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 542,
+      "date": "2026-01-19",
+      "day_name": "mon",
+      "theme": "Winter heather",
+      "tasks": [
+        {
+          "id": 543,
+          "text": "revise maths",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 544,
+          "text": "11am tattoo touch ups and photos",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 545,
+      "date": "2026-01-20",
+      "day_name": "tue",
+      "theme": "Candlewax",
+      "tasks": [
+        {
+          "id": 546,
+          "text": "Bee's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 547,
+          "text": "revise with friends",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 548,
+          "text": "walk with adam surprise view",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 549,
+      "date": "2026-01-21",
+      "day_name": "wed",
+      "theme": "Soup",
+      "tasks": []
+    },
+    {
+      "id": 550,
+      "date": "2026-01-22",
+      "day_name": "thu",
+      "theme": "Christmas rose",
+      "tasks": []
+    },
+    {
+      "id": 551,
+      "date": "2026-01-23",
+      "day_name": "fri",
+      "theme": "Witch Hazel",
+      "tasks": []
+    },
+    {
+      "id": 552,
+      "date": "2026-01-24",
+      "day_name": "sat",
+      "theme": "Amethyst",
+      "tasks": []
+    },
+    {
+      "id": 553,
+      "date": "2026-01-25",
+      "day_name": "sun",
+      "theme": "Haggis (Burns Night 🥃)",
+      "tasks": [
+        {
+          "id": 554,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 555,
+      "date": "2026-01-26",
+      "day_name": "mon",
+      "theme": "Wolfmoon",
+      "tasks": []
+    },
+    {
+      "id": 556,
+      "date": "2026-01-27",
+      "day_name": "tue",
+      "theme": "Frostbite",
+      "tasks": []
+    },
+    {
+      "id": 557,
+      "date": "2026-01-28",
+      "day_name": "wed",
+      "theme": "Blizzard",
+      "tasks": [
+        {
+          "id": 558,
+          "text": "structures n dynamics 9-11pm Goodwin Sports Hall",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 559,
+          "text": "4:30pm BAE interview",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 560,
+      "date": "2026-01-29",
+      "day_name": "thu",
+      "theme": "Fern",
+      "tasks": [
+        {
+          "id": 561,
+          "text": "Phiz's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 562,
+          "text": "maths exam 9-12 Octagon Centre",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 563,
+          "text": "lost n found haircut 1pm",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 564,
+      "date": "2026-01-30",
+      "day_name": "fri",
+      "theme": "Evergreen",
+      "tasks": [
+        {
+          "id": 565,
+          "text": "submit programming assignment",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 566,
+          "text": "look over ukroc design from stuart",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 567,
+      "date": "2026-01-31",
+      "day_name": "sat",
+      "theme": "Candlelight",
+      "tasks": []
+    },
+    {
+      "id": 568,
+      "date": "2026-02-01",
+      "day_name": "sun",
+      "theme": "Crocus",
+      "tasks": []
+    },
+    {
+      "id": 569,
+      "date": "2026-02-02",
+      "day_name": "mon",
+      "theme": "Imbolc",
+      "tasks": []
+    },
+    {
+      "id": 570,
+      "date": "2026-02-03",
+      "day_name": "tue",
+      "theme": "Lenten roise",
+      "tasks": []
+    },
+    {
+      "id": 571,
+      "date": "2026-02-04",
+      "day_name": "wed",
+      "theme": "Sparrowhawk",
+      "tasks": []
+    },
+    {
+      "id": 572,
+      "date": "2026-02-05",
+      "day_name": "thu",
+      "theme": "Hazel",
+      "tasks": [
+        {
+          "id": 573,
+          "text": "prep ssi talk",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 574,
+      "date": "2026-02-06",
+      "day_name": "fri",
+      "theme": "Icicle-song",
+      "tasks": [
+        {
+          "id": 575,
+          "text": "review my skills",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 576,
+      "date": "2026-02-07",
+      "day_name": "sat",
+      "theme": "Daphne",
+      "tasks": []
+    },
+    {
+      "id": 577,
+      "date": "2026-02-08",
+      "day_name": "sun",
+      "theme": "Primrose",
+      "tasks": [
+        {
+          "id": 578,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 579,
+          "text": "SNAPPY MRC LAUNCH",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 580,
+      "date": "2026-02-09",
+      "day_name": "mon",
+      "theme": "Moss",
+      "tasks": [
+        {
+          "id": 581,
+          "text": "technical meeting 6-7pm hicks LT5",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 582,
+          "text": "book thermo labs",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 583,
+          "text": "Post big SSI post + make ones for this week",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 584,
+      "date": "2026-02-10",
+      "day_name": "tue",
+      "theme": "Badger",
+      "tasks": [
+        {
+          "id": 585,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 586,
+          "text": "Thermo quiz 4",
+          "due": "19th",
+          "done": true
+        },
+        {
+          "id": 587,
+          "text": "follow up email cairsens",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 588,
+      "date": "2026-02-11",
+      "day_name": "wed",
+      "theme": "Windstorm",
+      "tasks": [
+        {
+          "id": 589,
+          "text": "ssi talks restart",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 590,
+      "date": "2026-02-12",
+      "day_name": "thu",
+      "theme": "Blanket",
+      "tasks": []
+    },
+    {
+      "id": 591,
+      "date": "2026-02-13",
+      "day_name": "fri",
+      "theme": "Daphne",
+      "tasks": [
+        {
+          "id": 592,
+          "text": "prep rocketry project openrocket?",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 593,
+          "text": "Teng Tool sponsorship email",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 594,
+      "date": "2026-02-14",
+      "day_name": "sat",
+      "theme": "Valentine 💕",
+      "tasks": [
+        {
+          "id": 595,
+          "text": "Valentines",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 596,
+      "date": "2026-02-15",
+      "day_name": "sun",
+      "theme": "Mahonia",
+      "tasks": [
+        {
+          "id": 597,
+          "text": "prep ssi talk",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 598,
+          "text": "rocket gantt chart",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 599,
+      "date": "2026-02-16",
+      "day_name": "mon",
+      "theme": "Pancake-pan",
+      "tasks": [
+        {
+          "id": 600,
+          "text": "16/2 thermo lecture",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 601,
+      "date": "2026-02-17",
+      "day_name": "tue",
+      "theme": "Pancake 🥞 (Shrove Tuesday)",
+      "tasks": [
+        {
+          "id": 602,
+          "text": "Pancake day + Lunar new year",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 603,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 604,
+      "date": "2026-02-18",
+      "day_name": "wed",
+      "theme": "Lemon",
+      "tasks": [
+        {
+          "id": 605,
+          "text": "4-5 Safeguarding Training",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 606,
+          "text": "Heat Exchanger Prelab",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 607,
+          "text": "L4C report",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 608,
+      "date": "2026-02-19",
+      "day_name": "thu",
+      "theme": "Jam",
+      "tasks": [
+        {
+          "id": 609,
+          "text": "mention ProtoGT sponsorhip in outreach",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 610,
+          "text": "9-10:30 heat exchange lab",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 611,
+          "text": "1-2 sponsorship meeting",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 612,
+      "date": "2026-02-20",
+      "day_name": "fri",
+      "theme": "Maple",
+      "tasks": [
+        {
+          "id": 613,
+          "text": "adam back :)",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 614,
+      "date": "2026-02-21",
+      "day_name": "sat",
+      "theme": "Violet",
+      "tasks": [
+        {
+          "id": 615,
+          "text": "anniversary :)",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 616,
+      "date": "2026-02-22",
+      "day_name": "sun",
+      "theme": "Alder",
+      "tasks": [
+        {
+          "id": 617,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 618,
+          "text": "prep ssi talk",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 619,
+      "date": "2026-02-23",
+      "day_name": "mon",
+      "theme": "Catkin",
+      "tasks": [
+        {
+          "id": 620,
+          "text": "technical meeting 6-7pm hicks LT5",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 621,
+          "text": "embedded lab sheet",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 622,
+          "text": "Try call ENVEA guy",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 623,
+      "date": "2026-02-24",
+      "day_name": "tue",
+      "theme": "Willow",
+      "tasks": [
+        {
+          "id": 624,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 625,
+          "text": "email 9 more for sunride",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 626,
+          "text": "thermo quiz 5",
+          "due": "03/05/2026",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 627,
+      "date": "2026-02-25",
+      "day_name": "wed",
+      "theme": "Violet",
+      "tasks": [
+        {
+          "id": 628,
+          "text": "orthodontics 4pm",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 629,
+          "text": "fume hood lab induction stuffs",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 630,
+      "date": "2026-02-26",
+      "day_name": "thu",
+      "theme": "Nest",
+      "tasks": [
+        {
+          "id": 631,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 632,
+      "date": "2026-02-27",
+      "day_name": "fri",
+      "theme": "Sprout",
+      "tasks": [
+        {
+          "id": 633,
+          "text": "BAE DBS",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 634,
+          "text": "BAE Clearance",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 635,
+      "date": "2026-02-28",
+      "day_name": "sat",
+      "theme": "Raincloud",
+      "tasks": [
+        {
+          "id": 636,
+          "text": "sunride girlies social namsong",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 637,
+      "date": "2026-03-01",
+      "day_name": "sun",
+      "theme": "Daffodil 🌼 (St David’s Day)",
+      "tasks": [
+        {
+          "id": 638,
+          "text": "ssi posts",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 639,
+          "text": "prep ssi talk",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 640,
+          "text": "update open rocket and CAD for MAC",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 641,
+      "date": "2026-03-02",
+      "day_name": "mon",
+      "theme": "Lark",
+      "tasks": [
+        {
+          "id": 642,
+          "text": "make MAC avi bay taller and update",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 643,
+          "text": "go over thermo lecture 2/3 (shock waves)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 644,
+          "text": "send Abby email update",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 645,
+          "text": "message surina and add to boeing application",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 646,
+      "date": "2026-03-03",
+      "day_name": "tue",
+      "theme": "Primrose",
+      "tasks": [
+        {
+          "id": 647,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 648,
+          "text": "UKROC design help 12:25-1:35",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 649,
+          "text": "NSSC planning",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 650,
+          "text": "upload updated fins",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 651,
+      "date": "2026-03-04",
+      "day_name": "wed",
+      "theme": "Flowering currant",
+      "tasks": [
+        {
+          "id": 652,
+          "text": "Adan's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 653,
+          "text": "materials prelab!!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 654,
+          "text": "copy over electrical notes",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 655,
+      "date": "2026-03-05",
+      "day_name": "thu",
+      "theme": "Dewdrop",
+      "tasks": []
+    },
+    {
+      "id": 656,
+      "date": "2026-03-06",
+      "day_name": "fri",
+      "theme": "Rainbow",
+      "tasks": [
+        {
+          "id": 657,
+          "text": "prep and print sheets for scouts",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 658,
+      "date": "2026-03-07",
+      "day_name": "sat",
+      "theme": "Lesser celandine",
+      "tasks": []
+    },
+    {
+      "id": 659,
+      "date": "2026-03-08",
+      "day_name": "sun",
+      "theme": "Sprinkles",
+      "tasks": [
+        {
+          "id": 660,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 661,
+          "text": "prep ssi talk wed + scouts",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 662,
+          "text": "thermo 6",
+          "due": "19/3",
+          "done": true
+        },
+        {
+          "id": 663,
+          "text": "get signatures L4C h&s and send form",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 664,
+      "date": "2026-03-09",
+      "day_name": "mon",
+      "theme": "Ladybird",
+      "tasks": [
+        {
+          "id": 665,
+          "text": "catch up friday 6th lectures, Monday thermo",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 666,
+          "text": "6:30 - 8 scouts for ssi",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 667,
+          "text": "read email about BAE contract",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 668,
+      "date": "2026-03-10",
+      "day_name": "tue",
+      "theme": "Blackthorn",
+      "tasks": [
+        {
+          "id": 669,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 670,
+          "text": "upload NI letter once have",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 671,
+          "text": "embedded buggy check",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 672,
+          "text": "finish snappy v2 diff pressure sensor cad",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 673,
+      "date": "2026-03-11",
+      "day_name": "wed",
+      "theme": "Wood anemone",
+      "tasks": []
+    },
+    {
+      "id": 674,
+      "date": "2026-03-12",
+      "day_name": "thu",
+      "theme": "Breeze",
+      "tasks": [
+        {
+          "id": 675,
+          "text": "donate blood 9:50am",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 676,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 677,
+          "text": "ssi egm meeting + talk about activities awards / start planning?",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 678,
+          "text": "update dps bay",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 679,
+      "date": "2026-03-13",
+      "day_name": "fri",
+      "theme": "Raindrop",
+      "tasks": [
+        {
+          "id": 680,
+          "text": "home for NSSC - COLLECT TICKET",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 681,
+          "text": "Make mothers day card!!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 682,
+          "text": "catch up friday electrical",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 683,
+      "date": "2026-03-14",
+      "day_name": "sat",
+      "theme": "Willow",
+      "tasks": [
+        {
+          "id": 684,
+          "text": "NSSC day 1",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 685,
+      "date": "2026-03-15",
+      "day_name": "sun",
+      "theme": "Lungwort",
+      "tasks": [
+        {
+          "id": 686,
+          "text": "Dad's birthday, Mothers day",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 687,
+          "text": "NSSC day 2",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 688,
+          "text": "understanding yourself and self care thingy",
+          "due": "18/3",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 689,
+      "date": "2026-03-16",
+      "day_name": "mon",
+      "theme": "Grape hyacinth",
+      "tasks": [
+        {
+          "id": 690,
+          "text": "Nanny val's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 691,
+          "text": "embedded lab sheet",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 692,
+          "text": "SELSA leadership styles II",
+          "due": "18/3",
+          "done": true
+        },
+        {
+          "id": 693,
+          "text": "water plants",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 694,
+      "date": "2026-03-17",
+      "day_name": "tue",
+      "theme": "Clover (St Patrick’s Day ☘️)",
+      "tasks": [
+        {
+          "id": 695,
+          "text": "St Patrick's Day",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 696,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 697,
+      "date": "2026-03-18",
+      "day_name": "wed",
+      "theme": "Willow-catkin",
+      "tasks": [
+        {
+          "id": 698,
+          "text": "sort out new online portal stuff for accom",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 699,
+          "text": "activitiy awards applications",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 700,
+          "text": "thermal radiation prelab",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 701,
+          "text": "look into institute of physics funding",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 702,
+      "date": "2026-03-19",
+      "day_name": "thu",
+      "theme": "Bud",
+      "tasks": [
+        {
+          "id": 703,
+          "text": "Thermal radiation online lab",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 704,
+      "date": "2026-03-20",
+      "day_name": "fri",
+      "theme": "Equinox (Spring Equinox 🌸)",
+      "tasks": [
+        {
+          "id": 705,
+          "text": "Eid ul Fitr (end of Ramadan) + Spring equinox",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 706,
+          "text": "restart pill",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 707,
+      "date": "2026-03-21",
+      "day_name": "sat",
+      "theme": "Blossom",
+      "tasks": [
+        {
+          "id": 708,
+          "text": "CAD for helix avi bay",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 709,
+      "date": "2026-03-22",
+      "day_name": "sun",
+      "theme": "Violet",
+      "tasks": [
+        {
+          "id": 710,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 711,
+      "date": "2026-03-23",
+      "day_name": "mon",
+      "theme": "3-cornered leek",
+      "tasks": [
+        {
+          "id": 712,
+          "text": "technical meeting 6-7pm hicks LT5",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 713,
+          "text": "embedded buggy check",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 714,
+      "date": "2026-03-24",
+      "day_name": "tue",
+      "theme": "Common box - honey",
+      "tasks": [
+        {
+          "id": 715,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 716,
+          "text": "reapply student finance",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 717,
+      "date": "2026-03-25",
+      "day_name": "wed",
+      "theme": "Nestling",
+      "tasks": [
+        {
+          "id": 718,
+          "text": "reply clearance email with info",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 719,
+          "text": "Amir hygge date 1:10",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 720,
+      "date": "2026-03-26",
+      "day_name": "thu",
+      "theme": "Songbird",
+      "tasks": [
+        {
+          "id": 721,
+          "text": "outreach meeting",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 722,
+          "text": "5:30 hair consult The Wild Colour",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 723,
+      "date": "2026-03-27",
+      "day_name": "fri",
+      "theme": "Wagtail",
+      "tasks": [
+        {
+          "id": 724,
+          "text": "last day before easter",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 725,
+          "text": "pay rent",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 726,
+      "date": "2026-03-28",
+      "day_name": "sat",
+      "theme": "Eggshell",
+      "tasks": [
+        {
+          "id": 727,
+          "text": "sunride girlies pottery 1:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 728,
+      "date": "2026-03-29",
+      "day_name": "sun",
+      "theme": "Bloom",
+      "tasks": [
+        {
+          "id": 729,
+          "text": "more helix & l4c",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 730,
+          "text": "amir n ghibli",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 731,
+      "date": "2026-03-30",
+      "day_name": "mon",
+      "theme": "Tulip",
+      "tasks": [
+        {
+          "id": 732,
+          "text": "embedded altimeter assignment",
+          "due": "28/4",
+          "done": true
+        },
+        {
+          "id": 733,
+          "text": "Ali drinks date",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 734,
+          "text": "Hanging with David - bead bracelets",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 735,
+      "date": "2026-03-31",
+      "day_name": "tue",
+      "theme": "Forget-me-not",
+      "tasks": [
+        {
+          "id": 736,
+          "text": "prep ssi talk",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 737,
+      "date": "2026-04-01",
+      "day_name": "wed",
+      "theme": "Fool (April Fools’ Day)",
+      "tasks": [
+        {
+          "id": 738,
+          "text": "buy aerosoc ball tickets (and membership if cheaper)",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 739,
+      "date": "2026-04-02",
+      "day_name": "thu",
+      "theme": "Cowslip",
+      "tasks": [
+        {
+          "id": 740,
+          "text": "Ali films evening",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 741,
+      "date": "2026-04-03",
+      "day_name": "fri",
+      "theme": "Bluebell",
+      "tasks": [
+        {
+          "id": 742,
+          "text": "Mohammad art stuff",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 743,
+      "date": "2026-04-04",
+      "day_name": "sat",
+      "theme": "Cherryblossom",
+      "tasks": [
+        {
+          "id": 744,
+          "text": "plan lyrids meteor shower trip",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 745,
+      "date": "2026-04-05",
+      "day_name": "sun",
+      "theme": "Easter Egg 🐣 (Easter Sunday)",
+      "tasks": [
+        {
+          "id": 746,
+          "text": "Easter",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 747,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 748,
+          "text": "Mohammad botanical n tiramisu",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 749,
+      "date": "2026-04-06",
+      "day_name": "mon",
+      "theme": "Bunny",
+      "tasks": [
+        {
+          "id": 750,
+          "text": "Amir redbrick market",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 751,
+      "date": "2026-04-07",
+      "day_name": "tue",
+      "theme": "Buttercup",
+      "tasks": [
+        {
+          "id": 752,
+          "text": "Rami see his place finally",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 753,
+      "date": "2026-04-08",
+      "day_name": "wed",
+      "theme": "Meadow",
+      "tasks": [
+        {
+          "id": 754,
+          "text": "quiz 7 thermo",
+          "due": "30/4",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 755,
+      "date": "2026-04-09",
+      "day_name": "thu",
+      "theme": "Peony",
+      "tasks": [
+        {
+          "id": 756,
+          "text": "1:45 Hair dye! the wild colour",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 757,
+      "date": "2026-04-10",
+      "day_name": "fri",
+      "theme": "Daisy",
+      "tasks": [
+        {
+          "id": 758,
+          "text": "finish venus",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 759,
+      "date": "2026-04-11",
+      "day_name": "sat",
+      "theme": "Apple blossom",
+      "tasks": [
+        {
+          "id": 760,
+          "text": "GET £10 CASH FOR MRC",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 761,
+          "text": "post vinted",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 762,
+      "date": "2026-04-12",
+      "day_name": "sun",
+      "theme": "Magnolia",
+      "tasks": [
+        {
+          "id": 763,
+          "text": "Venus launch MRC",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 764,
+          "text": "clear/organise email",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 765,
+      "date": "2026-04-13",
+      "day_name": "mon",
+      "theme": "Lambsong",
+      "tasks": [
+        {
+          "id": 766,
+          "text": "wardrobe clear out n organise - track?",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 767,
+          "text": "altimeter code",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 768,
+          "text": "washing",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 769,
+      "date": "2026-04-14",
+      "day_name": "tue",
+      "theme": "Dandelion",
+      "tasks": [
+        {
+          "id": 770,
+          "text": "12:30 UKROC",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 771,
+          "text": "post vinted",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 772,
+          "text": "altimeter code",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 773,
+          "text": "update lyrids meteor shower stuff n post",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 774,
+      "date": "2026-04-15",
+      "day_name": "wed",
+      "theme": "Buttercup",
+      "tasks": [
+        {
+          "id": 775,
+          "text": "get fixitive spray",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 776,
+          "text": "IC lock in",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 777,
+          "text": "pick up package",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 778,
+          "text": "call with nkdtv about rocket documentary",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 779,
+      "date": "2026-04-16",
+      "day_name": "thu",
+      "theme": "Rainshower",
+      "tasks": []
+    },
+    {
+      "id": 780,
+      "date": "2026-04-17",
+      "day_name": "fri",
+      "theme": "Hummingbird",
+      "tasks": []
+    },
+    {
+      "id": 781,
+      "date": "2026-04-18",
+      "day_name": "sat",
+      "theme": "Starflower",
+      "tasks": [
+        {
+          "id": 782,
+          "text": "10am hike tanya n razan",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 783,
+      "date": "2026-04-19",
+      "day_name": "sun",
+      "theme": "Crab apple",
+      "tasks": [
+        {
+          "id": 784,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 785,
+          "text": "prep back to class after easter",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 786,
+          "text": "lyrids meteor shower trip hopefully",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 787,
+          "text": "prep ssi talk",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 788,
+      "date": "2026-04-20",
+      "day_name": "mon",
+      "theme": "Red dead nettle",
+      "tasks": [
+        {
+          "id": 789,
+          "text": "9am orthodontics",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 790,
+          "text": "control prelab",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 791,
+          "text": "david over the hedge review 4-6pm diamond",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 792,
+      "date": "2026-04-21",
+      "day_name": "tue",
+      "theme": "Wildflower",
+      "tasks": [
+        {
+          "id": 793,
+          "text": "UKROC north regionals",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 794,
+          "text": "amir exam",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 795,
+          "text": "catch up electrical n materials lecture missed",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 796,
+      "date": "2026-04-22",
+      "day_name": "wed",
+      "theme": "Cuckooflower (Earth Day 🌍)",
+      "tasks": [
+        {
+          "id": 797,
+          "text": "SSI AGM",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 798,
+          "text": "Call Ga",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 799,
+      "date": "2026-04-23",
+      "day_name": "thu",
+      "theme": "Dragonfly",
+      "tasks": [
+        {
+          "id": 800,
+          "text": "materials fr postlab (20%!)",
+          "due": "05/07/2026",
+          "done": true
+        },
+        {
+          "id": 801,
+          "text": "SSI Stargazing",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 802,
+          "text": "Power Electronics prelab",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 803,
+      "date": "2026-04-24",
+      "day_name": "fri",
+      "theme": "herbe robert",
+      "tasks": [
+        {
+          "id": 804,
+          "text": "Power Electronics postlab",
+          "due": "29/5",
+          "done": true
+        },
+        {
+          "id": 805,
+          "text": "Power Electronics online lab",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 806,
+          "text": "Mohammad altium tutorial",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 807,
+      "date": "2026-04-25",
+      "day_name": "sat",
+      "theme": "Snake's Head Fritillary",
+      "tasks": []
+    },
+    {
+      "id": 808,
+      "date": "2026-04-26",
+      "day_name": "sun",
+      "theme": "Annual honesty (flower)",
+      "tasks": [
+        {
+          "id": 809,
+          "text": "prep ssi talk",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 810,
+          "text": "altimeter buddy check",
+          "due": "28/4",
+          "done": true
+        },
+        {
+          "id": 811,
+          "text": "announce members minis n prep session wed",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 812,
+          "text": "Altimeter write up n flow chart",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 813,
+      "date": "2026-04-27",
+      "day_name": "mon",
+      "theme": "Alexanders",
+      "tasks": [
+        {
+          "id": 814,
+          "text": "draft exam timetable out - plan",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 815,
+          "text": "amir placement starts (doncaster)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 816,
+          "text": "make revision plan",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 817,
+      "date": "2026-04-28",
+      "day_name": "tue",
+      "theme": "Stitchwort",
+      "tasks": [
+        {
+          "id": 818,
+          "text": "subteam meeting 5:30-7:30",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 819,
+          "text": "NOON submit altimeter assignment",
+          "due": "28/4",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 820,
+      "date": "2026-04-29",
+      "day_name": "wed",
+      "theme": "Wild-garlic",
+      "tasks": [
+        {
+          "id": 821,
+          "text": "buy black spray paint + 5 min epoxy",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 822,
+          "text": "look at the sunride data post processing junk",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 823,
+          "text": "helix l4c mass table",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 824,
+          "text": "look into masters courses",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 825,
+      "date": "2026-04-30",
+      "day_name": "thu",
+      "theme": "Early purple orchid",
+      "tasks": [
+        {
+          "id": 826,
+          "text": "paint snoopy",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 827,
+      "date": "2026-05-01",
+      "day_name": "fri",
+      "theme": "Mayflowere / Hawthorn 🎀 (May Day / Beltane)",
+      "tasks": [
+        {
+          "id": 828,
+          "text": "thermo 8",
+          "due": "14/5",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 829,
+      "date": "2026-05-02",
+      "day_name": "sat",
+      "theme": "Cow parsley",
+      "tasks": [
+        {
+          "id": 830,
+          "text": "Tangie's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 831,
+          "text": "PPPP Mohammad",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 832,
+      "date": "2026-05-03",
+      "day_name": "sun",
+      "theme": "Rhododendron",
+      "tasks": [
+        {
+          "id": 833,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 834,
+          "text": "Big EARS! Venus launch",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 835,
+      "date": "2026-05-04",
+      "day_name": "mon",
+      "theme": "Starwars (May the 4th ✨)",
+      "tasks": []
+    },
+    {
+      "id": 836,
+      "date": "2026-05-05",
+      "day_name": "tue",
+      "theme": "Wisteria",
+      "tasks": [
+        {
+          "id": 837,
+          "text": "10:30-11:30pm BAE Pre Start Call",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 838,
+          "text": "final exam timetable out (check)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 839,
+          "text": "update dps bay",
+          "due": null,
+          "done": false
+        },
+        {
+          "id": 840,
+          "text": "process venus data",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 841,
+      "date": "2026-05-06",
+      "day_name": "wed",
+      "theme": "Lily of the valley",
+      "tasks": [
+        {
+          "id": 842,
+          "text": "Pick module choices 3rd year",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 843,
+          "text": "1 month w/ Rami! craft thing",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 844,
+          "text": "prep ele app 1 for friday (iron)",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 845,
+      "date": "2026-05-07",
+      "day_name": "thu",
+      "theme": "Jack-by-the-hedge",
+      "tasks": [
+        {
+          "id": 846,
+          "text": "Mohammad coding n craft day",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 847,
+          "text": "L4C Fume hood",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 848,
+          "text": "process fume hood data",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 849,
+      "date": "2026-05-08",
+      "day_name": "fri",
+      "theme": "Green alkanet",
+      "tasks": []
+    },
+    {
+      "id": 850,
+      "date": "2026-05-09",
+      "day_name": "sat",
+      "theme": "Comfrey",
+      "tasks": [
+        {
+          "id": 851,
+          "text": "Aerosoc summer ball 7pm tapton hall",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 852,
+      "date": "2026-05-10",
+      "day_name": "sun",
+      "theme": "Sunlight",
+      "tasks": []
+    },
+    {
+      "id": 853,
+      "date": "2026-05-11",
+      "day_name": "mon",
+      "theme": "Iris",
+      "tasks": []
+    },
+    {
+      "id": 854,
+      "date": "2026-05-12",
+      "day_name": "tue",
+      "theme": "Laburnum",
+      "tasks": [
+        {
+          "id": 855,
+          "text": "Mum's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 856,
+          "text": "finish Sem2: MockUp Test 3 Units 9 and 11 (TA Style)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 857,
+          "text": "make flashcards for modules",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 858,
+      "date": "2026-05-13",
+      "day_name": "wed",
+      "theme": "Ramsons",
+      "tasks": [
+        {
+          "id": 859,
+          "text": "Snoopy Rocket launch day",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 860,
+      "date": "2026-05-14",
+      "day_name": "thu",
+      "theme": "Red campion",
+      "tasks": []
+    },
+    {
+      "id": 861,
+      "date": "2026-05-15",
+      "day_name": "fri",
+      "theme": "Yallow archangel",
+      "tasks": [
+        {
+          "id": 862,
+          "text": "mock test - part b",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 863,
+      "date": "2026-05-16",
+      "day_name": "sat",
+      "theme": "Southernwood",
+      "tasks": [
+        {
+          "id": 864,
+          "text": "activities awards 4-11pm",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 865,
+      "date": "2026-05-17",
+      "day_name": "sun",
+      "theme": "Glowworm",
+      "tasks": [
+        {
+          "id": 866,
+          "text": "update schedule",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 867,
+      "date": "2026-05-18",
+      "day_name": "mon",
+      "theme": "Cricket",
+      "tasks": [
+        {
+          "id": 868,
+          "text": "prelab Compensator Design",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 869,
+          "text": "finish poster for presentation",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 870,
+          "text": "remind rami book flights",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 871,
+      "date": "2026-05-19",
+      "day_name": "tue",
+      "theme": "Ladybird",
+      "tasks": [
+        {
+          "id": 872,
+          "text": "Electrical mock exam",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 873,
+          "text": "plan when travelling home summer - book!!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 874,
+          "text": "design Helix / L4C mission patch",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 875,
+      "date": "2026-05-20",
+      "day_name": "wed",
+      "theme": "Valerian",
+      "tasks": [
+        {
+          "id": 876,
+          "text": "3 blue 1 brown",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 877,
+          "text": "set up BAE canvas account",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 878,
+          "text": "Send emails for FYP proposal",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 879,
+      "date": "2026-05-21",
+      "day_name": "thu",
+      "theme": "Wayfaring tree",
+      "tasks": [
+        {
+          "id": 880,
+          "text": "Servo System Compensator Design Lab",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 881,
+          "text": "Submit poster presentation midday!!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 882,
+          "text": "watch Control exam info video",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 883,
+      "date": "2026-05-22",
+      "day_name": "fri",
+      "theme": "Sunflower",
+      "tasks": [
+        {
+          "id": 884,
+          "text": "Poster Session Presentation",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 885,
+          "text": "grab snoopy bag o'bits in box",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 886,
+      "date": "2026-05-23",
+      "day_name": "sat",
+      "theme": "Zinnia",
+      "tasks": []
+    },
+    {
+      "id": 887,
+      "date": "2026-05-24",
+      "day_name": "sun",
+      "theme": "Pirate",
+      "tasks": []
+    },
+    {
+      "id": 888,
+      "date": "2026-05-25",
+      "day_name": "mon",
+      "theme": "Wildrose",
+      "tasks": []
+    },
+    {
+      "id": 889,
+      "date": "2026-05-26",
+      "day_name": "tue",
+      "theme": "Meadow",
+      "tasks": [
+        {
+          "id": 890,
+          "text": "ELE213 - Electrical Energy 9-11:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 891,
+      "date": "2026-05-27",
+      "day_name": "wed",
+      "theme": "Nest",
+      "tasks": [
+        {
+          "id": 892,
+          "text": "ELE216 - Control Engineering 13:30-15:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 893,
+      "date": "2026-05-28",
+      "day_name": "thu",
+      "theme": "Dragonfly",
+      "tasks": []
+    },
+    {
+      "id": 894,
+      "date": "2026-05-29",
+      "day_name": "fri",
+      "theme": "Larkspur",
+      "tasks": [
+        {
+          "id": 895,
+          "text": "FYP meeting with Dr Mila 4-4:30",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 896,
+      "date": "2026-05-30",
+      "day_name": "sat",
+      "theme": "Petal",
+      "tasks": [
+        {
+          "id": 897,
+          "text": "Tabby Teas Rami",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 898,
+      "date": "2026-05-31",
+      "day_name": "sun",
+      "theme": "Butterfly",
+      "tasks": []
+    },
+    {
+      "id": 899,
+      "date": "2026-06-01",
+      "day_name": "mon",
+      "theme": "Elderflower",
+      "tasks": []
+    },
+    {
+      "id": 900,
+      "date": "2026-06-02",
+      "day_name": "tue",
+      "theme": "Delphinium",
+      "tasks": [
+        {
+          "id": 901,
+          "text": "CMB227 - Aerospace Materials (Computer Room) 13:30 - 16",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 902,
+      "date": "2026-06-03",
+      "day_name": "wed",
+      "theme": "Daisychain",
+      "tasks": []
+    },
+    {
+      "id": 903,
+      "date": "2026-06-04",
+      "day_name": "thu",
+      "theme": "Meadowlark",
+      "tasks": [
+        {
+          "id": 904,
+          "text": "MAC213 - Aerodynamics and Heat Transfer 9-11",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 905,
+          "text": "get something for 2 month anniversairy!",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 906,
+      "date": "2026-06-05",
+      "day_name": "fri",
+      "theme": "Rose",
+      "tasks": [
+        {
+          "id": 907,
+          "text": "Rudy's celebratory dinner",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 908,
+      "date": "2026-06-06",
+      "day_name": "sat",
+      "theme": "Honeysuckle",
+      "tasks": [
+        {
+          "id": 909,
+          "text": "2 months with Rami!! botanist 6pm",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 910,
+      "date": "2026-06-07",
+      "day_name": "sun",
+      "theme": "Thrift/sea pink",
+      "tasks": [
+        {
+          "id": 911,
+          "text": "Katherine's birthday",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 912,
+          "text": "work on sunride cad n junk",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 913,
+      "date": "2026-06-08",
+      "day_name": "mon",
+      "theme": "Yarrow",
+      "tasks": [
+        {
+          "id": 914,
+          "text": "finish and convert l4c mission patch",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 915,
+      "date": "2026-06-09",
+      "day_name": "tue",
+      "theme": "Sunray",
+      "tasks": []
+    },
+    {
+      "id": 916,
+      "date": "2026-06-10",
+      "day_name": "wed",
+      "theme": "Meadow",
+      "tasks": []
+    },
+    {
+      "id": 917,
+      "date": "2026-06-11",
+      "day_name": "thu",
+      "theme": "Larkspur",
+      "tasks": []
+    },
+    {
+      "id": 918,
+      "date": "2026-06-12",
+      "day_name": "fri",
+      "theme": "Sunshine ☀️",
+      "tasks": [
+        {
+          "id": 919,
+          "text": "Hannah's birthday",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 920,
+      "date": "2026-06-13",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 921,
+          "text": "Cancel kahoot subscription! (nanstee@sheff)",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 922,
+      "date": "2026-06-14",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 923,
+          "text": "Karaokee (rami, tanya n others)",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 924,
+          "text": "Telemetry dinner",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 925,
+          "text": "pickup vinted package",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 926,
+      "date": "2026-06-15",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 927,
+          "text": "9:30am orthodontics",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 928,
+          "text": "razan handover n coffee at couch - 10am",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 929,
+          "text": "12:30-5 ish mohammad hang n pow pow",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 930,
+      "date": "2026-06-16",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 931,
+          "text": "ARCS launch day",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 932,
+      "date": "2026-06-17",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 933,
+          "text": "NRC launch day",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 934,
+          "text": "make sure any sunride /L4C stuff is with appropriate people before leaving!",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 935,
+          "text": "reading with tanya at hygge at 12",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 936,
+      "date": "2026-06-18",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 937,
+      "date": "2026-06-19",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 938,
+          "text": "head home",
+          "due": null,
+          "done": true
+        },
+        {
+          "id": 939,
+          "text": "next to normal proshot on yt",
+          "due": null,
+          "done": false
+        },
+        {
+          "id": 940,
+          "text": "check train tickets and shuttle bus",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 941,
+      "date": "2026-06-20",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 942,
+      "date": "2026-06-21",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 943,
+          "text": "head up to Ga's",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 944,
+      "date": "2026-06-22",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 945,
+          "text": "start BAE internship!!",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 946,
+      "date": "2026-06-23",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 947,
+      "date": "2026-06-24",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 948,
+      "date": "2026-06-25",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 949,
+      "date": "2026-06-26",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 950,
+      "date": "2026-06-27",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 951,
+      "date": "2026-06-28",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 952,
+      "date": "2026-06-29",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 953,
+      "date": "2026-06-30",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 954,
+      "date": "2026-07-01",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 955,
+      "date": "2026-07-02",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 956,
+      "date": "2026-07-03",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 957,
+      "date": "2026-07-04",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 958,
+      "date": "2026-07-05",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 959,
+      "date": "2026-07-06",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 960,
+      "date": "2026-07-07",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 961,
+      "date": "2026-07-08",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 962,
+      "date": "2026-07-09",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 963,
+      "date": "2026-07-10",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 964,
+          "text": "results day",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 965,
+      "date": "2026-07-11",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 966,
+          "text": "mag bbq",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 967,
+      "date": "2026-07-12",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 968,
+      "date": "2026-07-13",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 969,
+      "date": "2026-07-14",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 970,
+      "date": "2026-07-15",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 971,
+      "date": "2026-07-16",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 972,
+      "date": "2026-07-17",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 973,
+          "text": "Rami here in hotel!",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 974,
+      "date": "2026-07-18",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 975,
+      "date": "2026-07-19",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 976,
+      "date": "2026-07-20",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 977,
+          "text": "Rami leaves :(",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 978,
+      "date": "2026-07-21",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 979,
+      "date": "2026-07-22",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 980,
+          "text": "pay day!",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 981,
+      "date": "2026-07-23",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 982,
+      "date": "2026-07-24",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 983,
+      "date": "2026-07-25",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 984,
+          "text": "bbq with mum n all here",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 985,
+      "date": "2026-07-26",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 986,
+          "text": "fill out team lead application",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 987,
+      "date": "2026-07-27",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 988,
+      "date": "2026-07-28",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 989,
+      "date": "2026-07-29",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 1064,
+          "text": "Finish this organiser!",
+          "due": null,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 990,
+      "date": "2026-07-30",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 991,
+      "date": "2026-07-31",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 992,
+          "text": "Spiderman film out!!",
+          "due": null,
+          "done": false
+        },
+        {
+          "id": 993,
+          "text": "loner bench hangout?",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 994,
+      "date": "2026-08-01",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 995,
+          "text": "whenever get new timetable, book in donate blood",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 996,
+      "date": "2026-08-02",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 997,
+      "date": "2026-08-03",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 998,
+      "date": "2026-08-04",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 999,
+      "date": "2026-08-05",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1000,
+      "date": "2026-08-06",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1001,
+      "date": "2026-08-07",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1002,
+      "date": "2026-08-08",
+      "day_name": "sat",
+      "theme": "SARA launch stuff",
+      "tasks": []
+    },
+    {
+      "id": 1003,
+      "date": "2026-08-09",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1004,
+      "date": "2026-08-10",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1005,
+      "date": "2026-08-11",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1006,
+      "date": "2026-08-12",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1007,
+      "date": "2026-08-13",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1008,
+      "date": "2026-08-14",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1009,
+      "date": "2026-08-15",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1010,
+      "date": "2026-08-16",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1011,
+      "date": "2026-08-17",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1012,
+      "date": "2026-08-18",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1013,
+      "date": "2026-08-19",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1014,
+      "date": "2026-08-20",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1015,
+      "date": "2026-08-21",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1016,
+      "date": "2026-08-22",
+      "day_name": "sat",
+      "theme": "pay day!",
+      "tasks": []
+    },
+    {
+      "id": 1017,
+      "date": "2026-08-23",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1018,
+      "date": "2026-08-24",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1019,
+      "date": "2026-08-25",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1020,
+      "date": "2026-08-26",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1021,
+      "date": "2026-08-27",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1022,
+      "date": "2026-08-28",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1023,
+      "date": "2026-08-29",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1024,
+      "date": "2026-08-30",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1025,
+      "date": "2026-08-31",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1026,
+      "date": "2026-09-01",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1027,
+      "date": "2026-09-02",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1028,
+      "date": "2026-09-03",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1029,
+      "date": "2026-09-04",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1030,
+      "date": "2026-09-05",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1031,
+      "date": "2026-09-06",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1032,
+      "date": "2026-09-07",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1033,
+      "date": "2026-09-08",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1034,
+      "date": "2026-09-09",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1035,
+      "date": "2026-09-10",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1036,
+      "date": "2026-09-11",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 1037,
+          "text": "finish at BAE",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 1038,
+      "date": "2026-09-12",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 1039,
+          "text": "go home",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 1040,
+      "date": "2026-09-13",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1041,
+      "date": "2026-09-14",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1042,
+      "date": "2026-09-15",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1043,
+      "date": "2026-09-16",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1044,
+      "date": "2026-09-17",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1045,
+      "date": "2026-09-18",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1046,
+      "date": "2026-09-19",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1047,
+      "date": "2026-09-20",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1048,
+      "date": "2026-09-21",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 1049,
+          "text": "back up to sheffield",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 1050,
+      "date": "2026-09-22",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 1051,
+          "text": "pay day!",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 1052,
+      "date": "2026-09-23",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 1053,
+          "text": "repot amarylis and take out baby for mohammad",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 1054,
+      "date": "2026-09-24",
+      "day_name": "thu",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1055,
+      "date": "2026-09-25",
+      "day_name": "fri",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1056,
+      "date": "2026-09-26",
+      "day_name": "sat",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 1069,
+          "text": "Dad trip with Rami!",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 1057,
+      "date": "2026-09-27",
+      "day_name": "sun",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1058,
+      "date": "2026-09-28",
+      "day_name": "mon",
+      "theme": null,
+      "tasks": [
+        {
+          "id": 1059,
+          "text": "classes restart - 4pm orthodontics",
+          "due": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 1060,
+      "date": "2026-09-29",
+      "day_name": "tue",
+      "theme": null,
+      "tasks": []
+    },
+    {
+      "id": 1061,
+      "date": "2026-09-30",
+      "day_name": "wed",
+      "theme": null,
+      "tasks": []
+    }
+  ]
+}

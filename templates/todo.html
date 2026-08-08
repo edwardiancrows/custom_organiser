@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}To-do &middot; Eli's Organiser{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="hero-readout">
+    <span class="readout-label">To-do & Calendar</span>
+    <span class="readout-value" id="todo-total-readout">
+      <span id="todo-done-count">{{ summary.done_tasks }}</span> / <span id="todo-total-count">{{ summary.total_tasks }}</span>
+    </span>
+  </div>
+  <a href="#today" class="jump-today">Jump to today &rarr;</a>
+</section>
+
+<div class="todo-months" data-today="{{ today }}">
+  {% for month in months %}
+  <details class="todo-month" data-month-key="{{ month.key }}" {% if month.key >= today[:7] %}open{% endif %}>
+    <summary>
+      <span class="todo-month-label">{{ month.label }}</span>
+      <span class="todo-month-progress mono">{{ month.done_tasks }}/{{ month.total_tasks }}</span>
+    </summary>
+    <div class="todo-days">
+      {% for day in month.days %}
+      <div class="todo-day {{ 'is-today' if day.date == today else '' }}" data-day-id="{{ day.id }}" {% if day.date == today %}id="today"{% endif %}>
+        <div class="todo-day-head">
+          <span class="todo-day-date mono">{{ day.date }}</span>
+          <span class="todo-day-dow">{{ day.day_name }}</span>
+          {% if day.theme %}<span class="todo-day-theme">{{ day.theme }}</span>{% endif %}
+        </div>
+        <ul class="todo-task-list">
+          {% for task in day.tasks %}
+          <li class="todo-task {{ 'done' if task.done else '' }}" data-task-id="{{ task.id }}">
+            <label class="todo-check">
+              <input type="checkbox" class="todo-done-toggle" {{ 'checked' if task.done else '' }}>
+              <span class="todo-task-text">{{ task.text }}</span>
+            </label>
+            {% if task.due %}<span class="todo-due mono">due {{ task.due }}</span>{% endif %}
+            <button class="row-delete todo-task-delete" title="Remove">&times;</button>
+          </li>
+          {% endfor %}
+        </ul>
+        <form class="add-task-form">
+          <input type="text" name="text" placeholder="Add a task&hellip;" required>
+          <input type="text" name="due" placeholder="due (optional)">
+          <button type="submit">+</button>
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='todo.js') }}"></script>
+{% endblock %}

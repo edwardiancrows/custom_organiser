@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block title %}{{ year.name }} &middot; Eli's Organiser{% endblock %}
+{% block content %}
+
+<nav class="year-tabs">
+  <a href="{{ url_for('index') }}" class="tab tab-back">&larr; Overview</a>
+  {% for y in all_years %}
+    <a href="{{ url_for('year_page', year_id=y.id) }}" class="tab {{ 'active' if y.id == year.id else '' }}">{{ y.name }}</a>
+  {% endfor %}
+</nav>
+
+<div class="year-detail" data-year-id="{{ year.id }}">
+
+  <section class="statement-head">
+    <input class="year-title" id="year-name" value="{{ year.name }}" aria-label="Year name">
+    <button class="danger-link" id="delete-year">delete this year</button>
+  </section>
+
+  <section class="summary-strip">
+    <div class="summary-cell">
+      <span class="summary-label">Income</span>
+      <span class="summary-value mono positive" data-summary="income_yr">&pound;{{ "%.2f"|format(year.summary.income_yr) }}</span>
+      <span class="summary-sub mono" data-summary="income_month">&pound;{{ "%.2f"|format(year.summary.income_month) }}/mo</span>
+    </div>
+    <div class="summary-cell">
+      <span class="summary-label">Essentials</span>
+      <span class="summary-value mono negative" data-summary="expenses_yr">&pound;{{ "%.2f"|format(year.summary.expenses_yr) }}</span>
+      <span class="summary-sub mono" data-summary="expenses_month">&pound;{{ "%.2f"|format(year.summary.expenses_month) }}/mo</span>
+    </div>
+    <div class="summary-cell leftover-cell">
+      <span class="summary-label">Leftover (savings &amp; everything else)</span>
+      <span class="summary-value mono glow" data-summary="leftover_yr">&pound;{{ "%.2f"|format(year.summary.leftover_yr) }}</span>
+      <span class="summary-sub mono">
+        <span data-summary="leftover_month">&pound;{{ "%.2f"|format(year.summary.leftover_month) }}</span>/mo &middot;
+        <span data-summary="leftover_week">&pound;{{ "%.2f"|format(year.summary.leftover_week) }}</span>/wk (rough)
+      </span>
+    </div>
+  </section>
+
+  <section class="ledger-columns">
+
+    <div class="ledger-panel" data-kind="income">
+      <h3>In</h3>
+      <table class="ledger-table">
+        <thead>
+          <tr><th>Name</th><th>Amount / yr</th><th>Amount / mo</th><th></th></tr>
+        </thead>
+        <tbody id="income-body">
+          {% for item in year.income %}
+          <tr data-item-id="{{ item.id }}">
+            <td><input class="cell-input" data-field="name" value="{{ item.name }}"></td>
+            <td><input class="cell-input mono" data-field="amount_yr" type="number" step="0.01" value="{{ item.amount_yr }}"></td>
+            <td class="mono readonly-cell" data-field="amount_month">&pound;{{ "%.2f"|format(item.amount_month) }}</td>
+            <td><button class="row-delete" title="Remove">&times;</button></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <form class="add-row-form" data-kind="income">
+        <input type="text" name="name" placeholder="Source (e.g. Part-time job)" required>
+        <input type="number" name="amount_yr" placeholder="&pound; / yr" step="0.01" required>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div class="ledger-panel" data-kind="expenses">
+      <h3>Out (essentials)</h3>
+      <table class="ledger-table">
+        <thead>
+          <tr><th>Name</th><th>Amount / yr</th><th>Amount / mo</th><th></th></tr>
+        </thead>
+        <tbody id="expenses-body">
+          {% for item in year.expenses %}
+          <tr data-item-id="{{ item.id }}">
+            <td>
+              <input class="cell-input" data-field="name" value="{{ item.name }}">
+              {% if item.note %}<span class="note-flag" title="{{ item.note }}">{{ item.note }}</span>{% endif %}
+            </td>
+            <td><input class="cell-input mono" data-field="amount_yr" type="number" step="0.01" value="{{ item.amount_yr }}"></td>
+            <td class="mono readonly-cell" data-field="amount_month">&pound;{{ "%.2f"|format(item.amount_month) }}</td>
+            <td><button class="row-delete" title="Remove">&times;</button></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <form class="add-row-form" data-kind="expenses">
+        <input type="text" name="name" placeholder="Outgoing (e.g. Gym membership)" required>
+        <input type="number" name="amount_yr" placeholder="&pound; / yr" step="0.01" required>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+  </section>
+
+  <section class="schedules">
+    <h3>Upcoming / payment schedule</h3>
+    <div class="schedule-grid">
+
+      <div class="schedule-panel" data-sched="accommodation_payments">
+        <h4>Accommodation payments</h4>
+        <ul class="schedule-list">
+          {% for line in year.schedules.accommodation_payments %}
+          <li data-index="{{ loop.index0 }}"><span>{{ line }}</span><button class="row-delete">&times;</button></li>
+          {% endfor %}
+        </ul>
+        <form class="add-schedule-form" data-sched="accommodation_payments">
+          <input type="text" name="text" placeholder="e.g. 1st Oct 2026 - &pound;2000.00">
+          <button type="submit">+</button>
+        </form>
+      </div>
+
+      <div class="schedule-panel" data-sched="maintenance_loan_in">
+        <h4>Maintenance loan in</h4>
+        <ul class="schedule-list">
+          {% for line in year.schedules.maintenance_loan_in %}
+          <li data-index="{{ loop.index0 }}"><span>{{ line }}</span><button class="row-delete">&times;</button></li>
+          {% endfor %}
+        </ul>
+        <form class="add-schedule-form" data-sched="maintenance_loan_in">
+          <input type="text" name="text" placeholder="e.g. 30th Sep 2026 - &pound;3300.00">
+          <button type="submit">+</button>
+        </form>
+      </div>
+
+      <div class="schedule-panel" data-sched="scholarship_in">
+        <h4>Scholarship in {% if year.scholarship_note %}<span class="note-flag">{{ year.scholarship_note }}</span>{% endif %}</h4>
+        <ul class="schedule-list">
+          {% for line in year.schedules.scholarship_in %}
+          <li data-index="{{ loop.index0 }}"><span>{{ line }}</span><button class="row-delete">&times;</button></li>
+          {% endfor %}
+        </ul>
+        <form class="add-schedule-form" data-sched="scholarship_in">
+          <input type="text" name="text" placeholder="e.g. Monday 2nd Nov 2026">
+          <button type="submit">+</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  {% if year.notes %}
+  <section class="notes">
+    <h3>Notes</h3>
+    <ul>
+      {% for n in year.notes %}<li>{{ n }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='year.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,762 @@
+:root {
+  --bg: #0e150f;
+  --panel: #141f1a;
+  --panel-alt: #1b2622;
+  --ink: #eaf4ec;
+  --ink-dim: #93a89b;
+  --ink-faint: #5d7168;
+  --accent: #8fe3b0;
+  --accent-dim: #4f7a63;
+  --teal: #73ebdb;
+  --red: #e9628d;
+  --line: rgba(234, 244, 236, 0.09);
+
+  --font-display: Verdana, sans-serif;
+  --font-body: Verdana, sans-serif;
+  --font-mono: Verdana, monospace;
+
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(14, 21, 18, 0.88), rgba(14, 21, 18, 0.92)),
+    url("ghibli_bg1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.frame {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: var(--font-body); cursor: pointer; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------
+   Top bar
+----------------------------------------------------------------*/
+.topbar {
+  padding: 32px 0 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+.brand-text em { color: var(--accent); font-style: normal; }
+
+.topbar-sub {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.site-nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 7px 14px;
+  border-radius: 999px;
+  color: var(--ink-dim);
+  border: 1px solid transparent;
+}
+
+.site-nav-link:hover { color: var(--ink); border-color: var(--line); }
+.site-nav-link.active { background: var(--panel-alt); color: var(--accent); border-color: var(--line); }
+
+.content { flex: 1; padding-top: 36px; }
+
+.footer {
+  padding: 28px 0 10px;
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+}
+
+/* ---------------------------------------------------------------
+   Dashboard hero readout (shared by finances + todo pages)
+----------------------------------------------------------------*/
+.hero {
+  padding: 30px 32px 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  margin-bottom: 28px;
+}
+
+.hero-readout {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.readout-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+}
+
+.readout-value {
+  font-family: var(--font-mono);
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+
+.hero-caption {
+  margin: 14px 0 0;
+  color: var(--ink-dim);
+  font-size: 0.92rem;
+  max-width: 60ch;
+}
+
+.jump-today {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  border-bottom: 1px dashed var(--accent-dim);
+  padding-bottom: 2px;
+}
+
+/* ---------------------------------------------------------------
+   Year cards grid
+----------------------------------------------------------------*/
+.years-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.year-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.year-card:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+.year-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.tab-index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+
+.year-card-head h2 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.ledger-lines { margin: 0; }
+
+.ledger-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 3px 0;
+  font-size: 0.88rem;
+}
+
+.ledger-line dt { color: var(--ink-dim); margin: 0; }
+.ledger-line dd { margin: 0; }
+
+.ledger-rule {
+  border-top: 1px dashed var(--line);
+  margin: 8px 0;
+}
+
+.ledger-line.total dd { font-size: 1.05rem; color: var(--accent); }
+
+.positive { color: var(--accent); }
+.negative { color: var(--red); }
+
+.bar-compare {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 46px;
+  margin: 16px 0 12px;
+}
+
+.bar { flex: 1; border-radius: 3px 3px 0 0; min-height: 3px; }
+.bar-in { background: linear-gradient(180deg, var(--accent), var(--accent-dim)); }
+.bar-out { background: linear-gradient(180deg, var(--red), #7a3a33); }
+
+.year-card-foot {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-dim);
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.new-year-card {
+  align-items: stretch;
+  justify-content: center;
+  border-style: dashed;
+  gap: 10px;
+}
+
+.new-year-card input {
+  background: var(--panel-alt);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+}
+
+.new-year-card button {
+  background: var(--accent);
+  color: #0e1512;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------
+   Year detail page
+----------------------------------------------------------------*/
+.year-tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tab {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 7px 14px;
+  border-radius: 999px;
+  color: var(--ink-dim);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.tab:hover { color: var(--ink); }
+.tab.active { background: var(--panel-alt); color: var(--accent); border-color: var(--line); }
+.tab-back { color: var(--ink-faint); }
+
+.statement-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  gap: 12px;
+}
+
+.year-title {
+  background: none;
+  border: none;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 4px 2px;
+  border-bottom: 1px solid transparent;
+  min-width: 0;
+  flex: 1;
+}
+
+.year-title:hover, .year-title:focus {
+  border-bottom: 1px solid var(--line);
+  outline: none;
+}
+
+.danger-link {
+  background: none;
+  border: none;
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.danger-link:hover { color: var(--red); }
+
+.summary-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.summary-cell {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.leftover-cell { border-color: var(--accent-dim); }
+
+.summary-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+}
+
+.summary-value { font-size: 1.5rem; }
+.summary-sub { font-size: 0.78rem; color: var(--ink-dim); }
+
+.ledger-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.ledger-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.ledger-panel h3 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ledger-table { width: 100%; border-collapse: collapse; }
+
+.ledger-table th {
+  text-align: left;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+  font-weight: 500;
+  padding: 0 6px 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ledger-table th:nth-child(2), .ledger-table th:nth-child(3) { text-align: right; }
+
+.ledger-table td {
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.cell-input {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  padding: 6px 6px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cell-input.mono { font-family: var(--font-mono); text-align: right; }
+
+.cell-input:hover { border-color: var(--line); }
+.cell-input:focus { border-color: var(--accent-dim); outline: none; background: var(--panel-alt); }
+
+.readonly-cell { text-align: right; color: var(--ink-dim); padding-right: 10px; font-size: 0.85rem; }
+
+.note-flag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--teal);
+  margin-left: 6px;
+}
+
+.row-delete {
+  background: none;
+  border: none;
+  color: var(--ink-faint);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
+.row-delete:hover { color: var(--red); background: rgba(226,104,90,0.1); }
+
+.add-row-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.add-row-form input {
+  background: var(--panel-alt);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+
+.add-row-form input[name="name"] { flex: 2; min-width: 0; }
+.add-row-form input[name="amount_yr"] { flex: 1; min-width: 0; font-family: var(--font-mono); }
+
+.add-row-form button {
+  background: var(--accent);
+  color: #0e1512;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ---------------------------------------------------------------
+   Schedules & notes
+----------------------------------------------------------------*/
+.schedules { margin-bottom: 26px; }
+
+.schedules > h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.schedule-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.schedule-panel h4 {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.schedule-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.schedule-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 6px;
+}
+
+.add-schedule-form {
+  display: flex;
+  gap: 6px;
+}
+
+.add-schedule-form input {
+  flex: 1;
+  min-width: 0;
+  background: var(--panel-alt);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+}
+
+.add-schedule-form button {
+  background: none;
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-weight: 600;
+}
+
+.notes {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.notes h3 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.notes ul { margin: 0; padding-left: 18px; color: var(--ink-dim); font-size: 0.85rem; }
+.notes li { margin-bottom: 4px; }
+
+/* ---------------------------------------------------------------
+   To-do page
+----------------------------------------------------------------*/
+.todo-months {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todo-month {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.todo-month summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.todo-month summary::-webkit-details-marker { display: none; }
+
+.todo-month summary::before {
+  content: "\25B8";
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--ink-faint);
+  transition: transform 0.15s ease;
+}
+
+.todo-month[open] summary::before { transform: rotate(90deg); }
+
+.todo-month summary:hover { background: var(--panel-alt); }
+
+.todo-month-progress {
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+}
+
+.todo-days {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+
+.todo-day {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.todo-day:last-child { border-bottom: none; }
+
+.todo-day.is-today {
+  background: var(--panel-alt);
+}
+
+.todo-day-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.todo-day-date {
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+}
+
+.todo-day-dow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+}
+
+.todo-day-theme {
+  font-size: 0.78rem;
+  color: var(--teal);
+  font-style: italic;
+}
+
+.todo-task-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.todo-task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.todo-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.todo-check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.todo-task-text {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.todo-task.done .todo-task-text {
+  color: var(--ink-faint);
+  text-decoration: line-through;
+}
+
+.todo-due {
+  font-size: 0.72rem;
+  color: var(--teal);
+  white-space: nowrap;
+}
+
+.add-task-form {
+  display: flex;
+  gap: 8px;
+}
+
+.add-task-form input {
+  background: var(--panel-alt);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+}
+
+.add-task-form input[name="text"] { flex: 2; min-width: 0; }
+.add-task-form input[name="due"] { flex: 1; min-width: 0; font-family: var(--font-mono); }
+
+.add-task-form button {
+  background: var(--accent);
+  color: #0e1512;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+/* ---------------------------------------------------------------
+   Responsive
+----------------------------------------------------------------*/
+@media (max-width: 780px) {
+  .ledger-columns { grid-template-columns: 1fr; }
+  .schedule-grid { grid-template-columns: 1fr; }
+  .summary-strip { grid-template-columns: 1fr; }
+  .add-task-form { flex-wrap: wrap; }
+}
+
+/* Keyboard focus visibility */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .year-card { transition: none; }
+}

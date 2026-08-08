@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Statement Overview &middot; Eli's Organiser{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="hero-readout">
+    <span class="readout-label">total leftover across all years</span>
+    <span class="readout-value" id="total-leftover" data-value="{{ years | sum(attribute='summary.leftover_yr') }}">
+      &pound;{{ "%.2f"|format(years | sum(attribute='summary.leftover_yr')) }}
+    </span>
+  </div>
+</section>
+
+<section class="years-grid">
+  {% for y in years %}
+  <a class="year-card" href="{{ url_for('year_page', year_id=y.id) }}">
+    <div class="year-card-head">
+      <span class="tab-index">{{ '%02d' % loop.index }}</span>
+      <h2>{{ y.name }}</h2>
+    </div>
+    <dl class="ledger-lines">
+      <div class="ledger-line">
+        <dt>Income / yr</dt>
+        <dd class="mono positive">&pound;{{ "%.2f"|format(y.summary.income_yr) }}</dd>
+      </div>
+      <div class="ledger-line">
+        <dt>Essentials / yr</dt>
+        <dd class="mono negative">&pound;{{ "%.2f"|format(y.summary.expenses_yr) }}</dd>
+      </div>
+      <div class="ledger-rule"></div>
+      <div class="ledger-line total">
+        <dt>Leftover / yr</dt>
+        <dd class="mono">&pound;{{ "%.2f"|format(y.summary.leftover_yr) }}</dd>
+      </div>
+    </dl>
+    <div class="bar-compare" aria-hidden="true">
+      {% set max_val = (y.summary.income_yr, y.summary.expenses_yr) | max %}
+      <div class="bar bar-in" data-pct="{{ (y.summary.income_yr / max_val * 100) if max_val else 0 }}"></div>
+      <div class="bar bar-out" data-pct="{{ (y.summary.expenses_yr / max_val * 100) if max_val else 0 }}"></div>
+    </div>
+    <div class="year-card-foot">
+      <span>&pound;{{ "%.2f"|format(y.summary.leftover_month) }}/mo</span>
+      <span>&pound;{{ "%.2f"|format(y.summary.leftover_week) }}/wk (rough)</span>
+    </div>
+  </a>
+  {% endfor %}
+
+  <form class="year-card new-year-card" id="new-year-form">
+    <div class="year-card-head">
+      <span class="tab-index">+</span>
+      <h2>Add a year</h2>
+    </div>
+    <input type="text" name="name" placeholder="e.g. Year 4 (Masters)" required>
+    <button type="submit">Create</button>
+  </form>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('new-year-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name = e.target.name.value.trim();
+  if (!name) return;
+  const res = await fetch('/api/years', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({name})
+  });
+  if (res.ok) {
+    const year = await res.json();
+    window.location.href = '/year/' + year.id;
+  }
+});
+</script>
+{% endblock %}
