@@ -578,6 +578,67 @@ button { font-family: var(--font-body); cursor: pointer; }
 /* ---------------------------------------------------------------
    To-do page
 ----------------------------------------------------------------*/
+
+.outstanding-panel {
+  background: var(--panel);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.outstanding-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.outstanding-head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.outstanding-count {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.outstanding-list { max-height: 320px; overflow-y: auto; }
+
+.outstanding-date {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.outstanding-empty {
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.add-month-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.add-month-form button {
+  background: none;
+  border: 1px dashed var(--accent-dim);
+  color: var(--accent);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.add-month-form button:hover { background: var(--panel-alt); }
+
 .todo-months {
   display: flex;
   flex-direction: column;

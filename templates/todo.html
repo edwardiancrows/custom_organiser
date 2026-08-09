@@ -12,6 +12,30 @@
   <a href="#today" class="jump-today">Jump to today &rarr;</a>
 </section>
 
+<section class="outstanding-panel">
+  <div class="outstanding-head">
+    <h3>Unfinished (past &amp; today)</h3>
+    <span class="outstanding-count mono">{{ outstanding|length }}</span>
+  </div>
+  {% if outstanding %}
+  <ul class="todo-task-list outstanding-list">
+    {% for item in outstanding %}
+    <li class="todo-task" data-task-id="{{ item.task.id }}" data-day-id="{{ item.day.id }}">
+      <label class="todo-check">
+        <input type="checkbox" class="todo-done-toggle">
+        <span class="todo-task-text">{{ item.task.text }}</span>
+      </label>
+      {% if item.task.due %}<span class="todo-due mono">due {{ item.task.due }}</span>{% endif %}
+      <span class="outstanding-date mono">{{ item.day.date }}</span>
+      <button class="row-delete todo-task-delete" title="Remove">&times;</button>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="outstanding-empty">Nothing outstanding — nice.</p>
+  {% endif %}
+</section>
+
 <div class="todo-months" data-today="{{ today }}">
   {% for month in months %}
   <details class="todo-month" data-month-key="{{ month.key }}" {% if month.key >= today[:7] %}open{% endif %}>
@@ -29,8 +53,7 @@
         </div>
         <ul class="todo-task-list">
           {% for task in day.tasks %}
-          <li class="todo-task {{ 'done' if task.done else '' }}" data-task-id="{{ task.id }}">
-            <label class="todo-check">
+            <li class="todo-task {{ 'done' if task.done else '' }}" data-task-id="{{ task.id }}" data-day-id="{{ day.id }}">            <label class="todo-check">
               <input type="checkbox" class="todo-done-toggle" {{ 'checked' if task.done else '' }}>
               <span class="todo-task-text">{{ task.text }}</span>
             </label>
@@ -49,7 +72,12 @@
     </div>
   </details>
   {% endfor %}
+  
 </div>
+
+<form class="add-month-form" id="add-month-form">
+  <button type="submit">+ Add {{ next_month_label }}</button>
+</form>
 
 {% endblock %}
 

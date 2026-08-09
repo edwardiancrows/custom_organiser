@@ -1,5 +1,6 @@
 import json
 import os
+import calendar
 from datetime import date, datetime
 from threading import Lock
 
@@ -115,6 +116,30 @@ MONTH_NAMES = [
     "July", "August", "September", "October", "November", "December",
 ]
 
+def compute_next_month_start(days):
+    if not days:
+        today = date.today()
+        return date(today.year, today.month, 1)
+    last_date = datetime.strptime(days[-1]["date"], "%Y-%m-%d").date()
+    if last_date.month == 12:
+        return date(last_date.year + 1, 1, 1)
+    return date(last_date.year, last_date.month + 1, 1)
+
+
+def build_month_days(start_date, data):
+    year, month = start_date.year, start_date.month
+    num_days = calendar.monthrange(year, month)[1]
+    new_days = []
+    for day_num in range(1, num_days + 1):
+        d = date(year, month, day_num)
+        new_days.append({
+            "id": next_id(data),
+            "date": d.isoformat(),
+            "day_name": d.strftime("%a").lower(),
+            "theme": None,
+            "tasks": [],
+        })
+    return new_days
 
 def group_days_by_month(days):
     """Group todo days into month buckets, each with its own progress."""
@@ -156,11 +181,21 @@ def todo_page():
     days = data.get("todo_days", [])
     months = group_days_by_month(days)
     today = date.today().isoformat()
+    next_start = compute_next_month_start(days)
+    next_month_label = f"{MONTH_NAMES[next_start.month - 1]} {next_start.year}"
+    outstanding = [
+        {"day": d, "task": t}
+        for d in days
+        for t in d["tasks"]
+        if not t["done"] and d["date"] <= today
+    ]
     return render_template(
         "todo.html",
         months=months,
         summary=todo_summary(data),
         today=today,
+        next_month_label=next_month_label,
+        outstanding=outstanding,
     )
 
 @app.route("/finances")
@@ -407,6 +442,16 @@ def delete_task(task_id):
         summary = todo_summary(data)
     return jsonify({"summary": summary})
 
+@app.route("/api/todo/months", methods=["POST"])
+def add_month():
+    with _lock:
+        data = load_data()
+        days = data.setdefault("todo_days", [])
+        start = compute_next_month_start(days)
+        new_days = build_month_days(start, data)
+        days.extend(new_days)
+        save_data(data)
+    return jsonify({"added": len(new_days)}), 201
 
 if __name__ == "__main__":
        app.run(host="0.0.0.0", port=5000, debug=True)
