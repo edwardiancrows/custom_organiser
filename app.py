@@ -177,21 +177,21 @@ def todo_summary(data):
 # Planner: categories, block helpers, and data lookups
 # --------------------------------------------------------------------------
 CATEGORIES = [
-    {"id": "work",        "label": "Work",                        "color": "#F2A65A"},
-    {"id": "chill",        "label": "Chill",                       "color": "#2a2e37"},  # close to bg
+    {"id": "work",        "label": "Work",                        "color": "#358874"},
+    {"id": "chill",        "label": "Chill",                       "color": "#2a3732"},  # close to bg
     {"id": "food",         "label": "Food",                        "color": "#E85D75"},
-    {"id": "travelling",   "label": "Travelling",                  "color": "#4FB0C6"},
-    {"id": "other",        "label": "Other",                       "color": "#8A8F98"},
-    {"id": "aero_prop",    "label": "Aero Prop",                   "color": "#FF6B6B"},
-    {"id": "managing_eng", "label": "Managing Eng",                "color": "#C77DFF"},
-    {"id": "dynamics",     "label": "Aircraft Dynamics & Control",  "color": "#56CFE1"},
-    {"id": "antennas",     "label": "Antennas & Radar",             "color": "#72EFDD"},
-    {"id": "design",       "label": "Aircraft Design",              "color": "#80FFDB"},
-    {"id": "accounting",   "label": "Accounting & Law",             "color": "#FFD166"},
-    {"id": "aerodynamics", "label": "Aerodynamics",                 "color": "#06D6A0"},
-    {"id": "space",        "label": "Space Systems",                "color": "#118AB2"},
-    {"id": "ssc",          "label": "State Space Control",          "color": "#EF476F"},
-    {"id": "dissertation", "label": "Dissertation",                 "color": "#9D4EDD"},
+    {"id": "travelling",   "label": "Travelling",                  "color": "#367381"},
+    {"id": "other",        "label": "Other",                       "color": "#474D5A"},
+    {"id": "aero_prop",    "label": "Aero Prop",                   "color": "#7748A3"},
+    {"id": "managing_eng", "label": "Managing Eng",                "color": "#7D81FF"},
+    {"id": "dynamics",     "label": "Aircraft Dynamics & Control",  "color": "#2A4A95"},
+    {"id": "antennas",     "label": "Antennas & Radar",             "color": "#3B828E"},
+    {"id": "design",       "label": "Aircraft Design",              "color": "#3B8F77"},
+    {"id": "accounting",   "label": "Accounting & Law",             "color": "#5C5C5C"},
+    {"id": "aerodynamics", "label": "Aerodynamics",                 "color": "#005F45"},
+    {"id": "space",        "label": "Space Systems",                "color": "#094C62"},
+    {"id": "ssc",          "label": "State Space Control",          "color": "#3E437A"},
+    {"id": "dissertation", "label": "Dissertation",                 "color": "#452F56"},
 ]
 CATEGORY_IDS = {c["id"] for c in CATEGORIES}
 PLANNER_HOURS = list(range(6, 24))  # 06:00 .. 23:00 -> 18 one-hour blocks
