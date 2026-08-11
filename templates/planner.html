@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Planner &middot; Eli's Organiser{% endblock %}
+{% block content %}
+
+<div class="planner-page">
+
+  <section class="hero">
+    <div class="hero-readout">
+      <span class="readout-label">Weekly planner</span>
+      <span class="readout-value">6am &ndash; midnight, hour by hour</span>
+    </div>
+  </section>
+
+  <nav class="planner-week-tabs">
+    {% for week in weeks %}
+    <button type="button" class="tab {{ 'active' if loop.first else '' }}" data-week-index="{{ loop.index0 }}">{{ week.label }}</button>
+    {% endfor %}
+  </nav>
+
+  <div class="planner-weeks">
+    {% for week in weeks %}
+    <div class="planner-week" data-week-index="{{ loop.index0 }}" {{ '' if loop.first else 'hidden' }}>
+      <div class="planner-days-grid">
+        {% for day in week.days %}
+        <div class="planner-day {{ 'is-today' if day.is_today else '' }}" data-day-id="{{ day.id }}">
+
+          <div class="planner-day-head">
+            <span class="planner-day-dow">{{ day.day_name }}</span>
+            <span class="planner-day-date mono">{{ day.date }}</span>
+          </div>
+
+          <div class="planner-blocks">
+            {% for block in day.blocks %}
+            <div class="planner-block">
+              <span class="planner-block-time mono">{{ block.label }}</span>
+              <span class="planner-block-swatch"></span>
+              <select class="planner-block-select" data-block-id="{{ block.id }}">
+                {% for cat in categories %}
+                <option value="{{ cat.id }}" {{ 'selected' if cat.id == block.category_id else '' }}>{{ cat.label }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="planner-pie-wrap">
+            <div class="planner-pie" data-day-id="{{ day.id }}"></div>
+            <ul class="planner-pie-legend" data-day-id="{{ day.id }}"></ul>
+          </div>
+
+          <div class="planner-notes">
+            <h4>Notes</h4>
+            <textarea class="planner-notes-input" data-day-id="{{ day.id }}" placeholder="Events, reminders&hellip;">{{ day.notes }}</textarea>
+          </div>
+
+          <div class="planner-todos">
+            <h4>To-dos</h4>
+            <ul class="todo-task-list planner-todo-list">
+              {% for task in day.todos %}
+              <li class="todo-task {{ 'done' if task.done else '' }}" data-task-id="{{ task.id }}">
+                <label class="todo-check">
+                  <input type="checkbox" class="todo-done-toggle" {{ 'checked' if task.done else '' }}>
+                  <span class="todo-task-text">{{ task.text }}</span>
+                </label>
+                {% if task.due %}<span class="todo-due mono">due {{ task.due }}</span>{% endif %}
+                <button class="row-delete todo-task-delete" title="Remove">&times;</button>
+              </li>
+              {% endfor %}
+            </ul>
+            <form class="add-task-form planner-add-task-form" data-day-id="{{ day.todo_day_id }}">
+              <input type="text" name="text" placeholder="Add a task&hellip;" required>
+              <input type="text" name="due" placeholder="due (optional)">
+              <button type="submit">+</button>
+            </form>
+          </div>
+
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+<script id="planner-categories" type="application/json">{{ categories | tojson }}</script>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='planner.js') }}"></script>
+{% endblock %}

@@ -18,6 +18,7 @@
     </a>
     <nav class="site-nav">
       <a href="{{ url_for('todo_page') }}" class="site-nav-link {{ 'active' if request.endpoint == 'todo_page' else '' }}">To-do</a>
+      <a href="{{ url_for('planner_page') }}" class="site-nav-link {{ 'active' if request.endpoint == 'planner_page' else '' }}">Planner</a>
       <a href="{{ url_for('index') }}" class="site-nav-link {{ 'active' if request.endpoint == 'index' else '' }}">Finances</a>
     </nav>
   </header>

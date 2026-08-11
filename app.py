@@ -1,7 +1,7 @@
 import json
 import os
 import calendar
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from threading import Lock
 
 from flask import Flask, jsonify, render_template, request, abort
@@ -116,6 +116,7 @@ MONTH_NAMES = [
     "July", "August", "September", "October", "November", "December",
 ]
 
+
 def compute_next_month_start(days):
     if not days:
         today = date.today()
@@ -140,6 +141,7 @@ def build_month_days(start_date, data):
             "tasks": [],
         })
     return new_days
+
 
 def group_days_by_month(days):
     """Group todo days into month buckets, each with its own progress."""
@@ -172,9 +174,113 @@ def todo_summary(data):
 
 
 # --------------------------------------------------------------------------
+# Planner: categories, block helpers, and data lookups
+# --------------------------------------------------------------------------
+CATEGORIES = [
+    {"id": "work",        "label": "Work",                        "color": "#F2A65A"},
+    {"id": "chill",        "label": "Chill",                       "color": "#2a2e37"},  # close to bg
+    {"id": "food",         "label": "Food",                        "color": "#E85D75"},
+    {"id": "travelling",   "label": "Travelling",                  "color": "#4FB0C6"},
+    {"id": "other",        "label": "Other",                       "color": "#8A8F98"},
+    {"id": "aero_prop",    "label": "Aero Prop",                   "color": "#FF6B6B"},
+    {"id": "managing_eng", "label": "Managing Eng",                "color": "#C77DFF"},
+    {"id": "dynamics",     "label": "Aircraft Dynamics & Control",  "color": "#56CFE1"},
+    {"id": "antennas",     "label": "Antennas & Radar",             "color": "#72EFDD"},
+    {"id": "design",       "label": "Aircraft Design",              "color": "#80FFDB"},
+    {"id": "accounting",   "label": "Accounting & Law",             "color": "#FFD166"},
+    {"id": "aerodynamics", "label": "Aerodynamics",                 "color": "#06D6A0"},
+    {"id": "space",        "label": "Space Systems",                "color": "#118AB2"},
+    {"id": "ssc",          "label": "State Space Control",          "color": "#EF476F"},
+    {"id": "dissertation", "label": "Dissertation",                 "color": "#9D4EDD"},
+]
+CATEGORY_IDS = {c["id"] for c in CATEGORIES}
+PLANNER_HOURS = list(range(6, 24))  # 06:00 .. 23:00 -> 18 one-hour blocks
+
+
+def build_day_blocks(day_id, saved=None):
+    # NB: default was `saved={}` before -- a mutable default argument, which
+    # Python only evaluates ONCE at function-definition time. Every call that
+    # didn't pass `saved` explicitly would have shared and mutated the same
+    # dict, silently leaking one day's block choices into another.
+    saved = saved or {}
+    blocks = []
+    for hour in PLANNER_HOURS:
+        block_id = f"{day_id}-{hour}"
+        blocks.append({
+            "id": block_id,
+            "hour": hour,
+            "label": f"{hour:02d}:00",
+            "category_id": saved.get(block_id, "chill"),
+        })
+    return blocks
+
+
+def find_todo_day_by_date(data, date_iso):
+    for d in data.setdefault("todo_days", []):
+        if d["date"] == date_iso:
+            return d
+    return None
+
+
+def get_or_create_todo_day(data, the_date):
+    """Look up (or lazily create) the todo day for a given date so the
+    planner can always show/add tasks even for dates outside the
+    originally-imported spreadsheet range."""
+    date_iso = the_date.isoformat()
+    day = find_todo_day_by_date(data, date_iso)
+    if day is None:
+        day = {
+            "id": next_id(data),
+            "date": date_iso,
+            "day_name": the_date.strftime("%a").lower(),
+            "theme": None,
+            "tasks": [],
+        }
+        data.setdefault("todo_days", []).append(day)
+    return day
+
+
+def find_planner_day_by_date(data, date_iso):
+    for d in data.setdefault("planner_days", []):
+        if d["date"] == date_iso:
+            return d
+    return None
+
+
+def find_planner_day(data, day_id):
+    for d in data.setdefault("planner_days", []):
+        if d["id"] == day_id:
+            return d
+    return None
+
+
+def find_planner_day_by_block_id(data, block_id):
+    # block ids look like "<planner_day_id>-<hour>", e.g. "104-6"
+    try:
+        day_id_str, _hour = block_id.rsplit("-", 1)
+        day_id = int(day_id_str)
+    except (ValueError, AttributeError):
+        return None
+    return find_planner_day(data, day_id)
+
+
+def get_or_create_planner_day(data, the_date):
+    date_iso = the_date.isoformat()
+    day = find_planner_day_by_date(data, date_iso)
+    if day is None:
+        day = {
+            "id": next_id(data),
+            "date": date_iso,
+            "notes": "",
+            "block_categories": {},
+        }
+        data.setdefault("planner_days", []).append(day)
+    return day
+
+
+# --------------------------------------------------------------------------
 # Page routes
 # --------------------------------------------------------------------------
-
 @app.route("/")
 def todo_page():
     data = load_data()
@@ -198,6 +304,7 @@ def todo_page():
         outstanding=outstanding,
     )
 
+
 @app.route("/finances")
 def index():
     data = load_data()
@@ -212,6 +319,40 @@ def year_page(year_id):
     if year is None:
         abort(404)
     return render_template("year.html", year=year_with_summary(year), all_years=data["years"])
+
+
+@app.route("/planner")
+def planner_page():
+    with _lock:
+        data = load_data()
+        today = date.today()
+        monday = today - timedelta(days=today.weekday())
+        weeks = []
+        for w in range(2):
+            week_start = monday + timedelta(days=7 * w)
+            days = []
+            for d in range(7):
+                the_date = week_start + timedelta(days=d)
+                todo_day = get_or_create_todo_day(data, the_date)
+                planner_day = get_or_create_planner_day(data, the_date)
+                days.append({
+                    "id": planner_day["id"],
+                    "date": the_date.isoformat(),
+                    "day_name": the_date.strftime("%A"),
+                    "is_today": the_date == today,
+                    "notes": planner_day.get("notes", ""),
+                    "blocks": build_day_blocks(
+                        planner_day["id"], saved=planner_day.get("block_categories", {})
+                    ),
+                    "todos": todo_day["tasks"],
+                    "todo_day_id": todo_day["id"],
+                })
+            weeks.append({"label": "This week" if w == 0 else "Next week", "days": days})
+        # get_or_create_* above may have just created new todo/planner days
+        # (e.g. the first time this week is viewed) -- persist those.
+        save_data(data)
+
+    return render_template("planner.html", categories=CATEGORIES, weeks=weeks)
 
 
 # --------------------------------------------------------------------------
@@ -442,6 +583,7 @@ def delete_task(task_id):
         summary = todo_summary(data)
     return jsonify({"summary": summary})
 
+
 @app.route("/api/todo/months", methods=["POST"])
 def add_month():
     with _lock:
@@ -453,5 +595,43 @@ def add_month():
         save_data(data)
     return jsonify({"added": len(new_days)}), 201
 
+
+# --------------------------------------------------------------------------
+# API: planner
+# --------------------------------------------------------------------------
+@app.route("/api/planner/blocks/<block_id>", methods=["PUT"])
+def update_planner_block(block_id):
+    body = request.get_json(force=True) or {}
+    category_id = body.get("category_id")
+    if category_id not in CATEGORY_IDS:
+        return jsonify({"error": "invalid category_id"}), 400
+
+    with _lock:
+        data = load_data()
+        planner_day = find_planner_day_by_block_id(data, block_id)
+        if planner_day is None:
+            abort(404)
+        planner_day.setdefault("block_categories", {})[block_id] = category_id
+        save_data(data)
+
+    return jsonify({"ok": True})
+
+
+@app.route("/api/planner/days/<int:day_id>/notes", methods=["PUT"])
+def update_planner_day_notes(day_id):
+    body = request.get_json(force=True) or {}
+    notes = body.get("notes", "")
+
+    with _lock:
+        data = load_data()
+        planner_day = find_planner_day(data, day_id)
+        if planner_day is None:
+            abort(404)
+        planner_day["notes"] = notes
+        save_data(data)
+
+    return jsonify({"ok": True})
+
+
 if __name__ == "__main__":
-       app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
