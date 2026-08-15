@@ -177,21 +177,21 @@ def todo_summary(data):
 # Planner: categories, block helpers, and data lookups
 # --------------------------------------------------------------------------
 CATEGORIES = [
-    {"id": "work",        "label": "Work",                        "color": "#358874"},
-    {"id": "chill",        "label": "Chill",                       "color": "#2a3732"},  # close to bg
-    {"id": "food",         "label": "Food",                        "color": "#E85D75"},
-    {"id": "travelling",   "label": "Travelling",                  "color": "#367381"},
-    {"id": "other",        "label": "Other",                       "color": "#474D5A"},
-    {"id": "aero_prop",    "label": "Aero Prop",                   "color": "#7748A3"},
-    {"id": "managing_eng", "label": "Managing Eng",                "color": "#7D81FF"},
-    {"id": "dynamics",     "label": "Aircraft Dynamics & Control",  "color": "#2A4A95"},
-    {"id": "antennas",     "label": "Antennas & Radar",             "color": "#3B828E"},
-    {"id": "design",       "label": "Aircraft Design",              "color": "#3B8F77"},
-    {"id": "accounting",   "label": "Accounting & Law",             "color": "#5C5C5C"},
-    {"id": "aerodynamics", "label": "Aerodynamics",                 "color": "#005F45"},
-    {"id": "space",        "label": "Space Systems",                "color": "#094C62"},
-    {"id": "ssc",          "label": "State Space Control",          "color": "#3E437A"},
-    {"id": "dissertation", "label": "Dissertation",                 "color": "#452F56"},
+    {"id": "work",        "label": "Work",                        "color": "#F2A65A"},
+    {"id": "chill",        "label": "Chill",                       "color": "#2a2e37"},  # close to bg
+    {"id": "food",         "label": "Food",                        "color": "#e9628d"},
+    {"id": "travelling",   "label": "Travelling",                  "color": "#4FB0C6"},
+    {"id": "other",        "label": "Other",                       "color": "#8A8F98"},
+    {"id": "aero_prop",    "label": "Aero Prop",                   "color": "#FF6B6B"},
+    {"id": "managing_eng", "label": "Managing Eng",                "color": "#C77DFF"},
+    {"id": "dynamics",     "label": "Aircraft Dynamics & Control",  "color": "#56CFE1"},
+    {"id": "antennas",     "label": "Antennas & Radar",             "color": "#72EFDD"},
+    {"id": "design",       "label": "Aircraft Design",              "color": "#80FFDB"},
+    {"id": "accounting",   "label": "Accounting & Law",             "color": "#FFD166"},
+    {"id": "aerodynamics", "label": "Aerodynamics",                 "color": "#06D6A0"},
+    {"id": "space",        "label": "Space Systems",                "color": "#118AB2"},
+    {"id": "ssc",          "label": "State Space Control",          "color": "#EF476F"},
+    {"id": "dissertation", "label": "Dissertation",                 "color": "#9D4EDD"},
 ]
 CATEGORY_IDS = {c["id"] for c in CATEGORIES}
 PLANNER_HOURS = list(range(6, 24))  # 06:00 .. 23:00 -> 18 one-hour blocks
@@ -276,6 +276,30 @@ def get_or_create_planner_day(data, the_date):
         }
         data.setdefault("planner_days", []).append(day)
     return day
+
+
+def day_hour_map(day):
+    """Read a planner day's stored block_categories (keyed by the compound
+    "<day_id>-<hour>" block id) into a plain {hour: category_id} map, with
+    every hour present (defaulting to 'chill' same as build_day_blocks)."""
+    block_categories = day.get("block_categories", {}) or {}
+    result = {}
+    for h in PLANNER_HOURS:
+        key = f"{day['id']}-{h}"
+        result[h] = block_categories.get(key, "chill")
+    return result
+
+
+def apply_hour_map(day, hour_map):
+    """Overwrite a planner day's whole schedule from an {hour: category_id}
+    map, re-keying each entry under that day's own block id. 'chill' is the
+    default and isn't stored explicitly, matching how the block PUT route
+    already only ever writes non-chill selections."""
+    day["block_categories"] = {
+        f"{day['id']}-{h}": cat
+        for h, cat in hour_map.items()
+        if cat and cat != "chill"
+    }
 
 
 # --------------------------------------------------------------------------
@@ -631,6 +655,58 @@ def update_planner_day_notes(day_id):
         save_data(data)
 
     return jsonify({"ok": True})
+
+
+@app.route("/api/planner/days/<int:day_id>/copy", methods=["POST"])
+def copy_planner_day(day_id):
+    body = request.get_json(force=True) or {}
+    target = body.get("target")
+    if target not in ("week", "next_week"):
+        return jsonify({"error": "target must be 'week' or 'next_week'"}), 400
+
+    with _lock:
+        data = load_data()
+        source = find_planner_day(data, day_id)
+        if source is None:
+            abort(404)
+        source_date = datetime.strptime(source["date"], "%Y-%m-%d").date()
+        hour_map = day_hour_map(source)
+
+        if target == "week":
+            monday = source_date - timedelta(days=source_date.weekday())
+            target_dates = [
+                monday + timedelta(days=offset)
+                for offset in range(7)
+                if monday + timedelta(days=offset) != source_date
+            ]
+        else:  # next_week
+            target_dates = [source_date + timedelta(days=7)]
+
+        updates = []
+        for d in target_dates:
+            target_day = get_or_create_planner_day(data, d)
+            apply_hour_map(target_day, hour_map)
+            updates.append({
+                "day_id": target_day["id"],
+                "categories": day_hour_map(target_day),
+            })
+        save_data(data)
+
+    return jsonify({"updates": updates})
+
+
+@app.route("/api/planner/days/<int:day_id>/clear", methods=["POST"])
+def clear_planner_day(day_id):
+    with _lock:
+        data = load_data()
+        day = find_planner_day(data, day_id)
+        if day is None:
+            abort(404)
+        day["block_categories"] = {}
+        save_data(data)
+        categories = day_hour_map(day)
+
+    return jsonify({"updates": [{"day_id": day_id, "categories": categories}]})
 
 
 if __name__ == "__main__":

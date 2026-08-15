@@ -2,8 +2,8 @@
   "name": "Eli's Organiser",
   "short_name": "To-Do",
   "icons": [
-    { "src": "/static/plant_icon.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/static/ghibli_icon.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "cat_todo_icon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/static/cat_todo_icon.png", "sizes": "512x512", "type": "image/png" }
   ],
   "start_url": "/",
   "display": "standalone",
