@@ -2,8 +2,8 @@
   "name": "Eli's Organiser",
   "short_name": "To-Do",
   "icons": [
-    { "src": "basil.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "basil.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "basil_icon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "basil_icon.png", "sizes": "512x512", "type": "image/png" }
   ],
   "start_url": "/",
   "display": "standalone",
