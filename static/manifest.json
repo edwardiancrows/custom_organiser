@@ -3,7 +3,7 @@
   "short_name": "To-Do",
   "icons": [
     { "src": "cat_todo_icon.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/static/cat_todo_icon.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "basil.png", "sizes": "512x512", "type": "image/png" }
   ],
   "start_url": "/",
   "display": "standalone",
