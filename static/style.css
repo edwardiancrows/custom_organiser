@@ -842,6 +842,34 @@ button { font-family: var(--font-body); cursor: pointer; }
   align-items: baseline;
 }
 
+.planner-day-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.planner-day-action {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--ink¦-dim);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.planner-day-action:hover {
+  color: var(--ink);
+  border-color: var(--accent-dim);
+  background: var(--panel-alt);
+}
+
+.planner-day-action-danger:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
 .planner-blocks {
   display: flex;
   flex-direction: column;

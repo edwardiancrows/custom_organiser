@@ -182,4 +182,64 @@
       });
     });
   });
+
+  // ---- per-day actions: copy to rest of week / copy to next week / clear -
+  function setSelectValue(dayEl, hour, categoryId) {
+    const select = dayEl.querySelector(`.planner-block-select[data-block-id$="-${hour}"]`);
+    if (!select) return;
+    select.value = categoryId;
+    applySwatch(select);
+  }
+
+  function applyDayUpdate(update) {
+    const dayEl = document.querySelector(`.planner-day[data-day-id="${update.day_id}"]`);
+    if (!dayEl) return false;
+    Object.entries(update.categories).forEach(([hour, categoryId]) => {
+      setSelectValue(dayEl, hour, categoryId);
+    });
+    updatePieForDay(dayEl);
+    return true;
+  }
+
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest(".planner-day-action");
+    if (!btn) return;
+    const dayEl = btn.closest(".planner-day");
+    const dayId = dayEl.dataset.dayId;
+    const action = btn.dataset.action;
+
+    if (action === "copy-week" || action === "copy-next-week") {
+      const target = action === "copy-week" ? "week" : "next_week";
+      const label = target === "week" ? "the rest of this week" : "the same day next week";
+      if (!confirm(`Copy this day's selections to ${label}? This overwrites whatever is already there.`)) return;
+
+      const res = await fetch(`/api/planner/days/${dayId}/copy`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ target }),
+      });
+      if (!res.ok) {
+        console.error("Failed to copy planner day", dayId);
+        return;
+      }
+      // Reload rather than patch the DOM in place: a "copy to next week"
+      // from a day that's already in the "next week" tab targets a day
+      // two weeks out, which isn't rendered on this page at all -- reload
+      // is the simple, always-correct way to pick that up (and everything
+      // else) consistently.
+      window.location.reload();
+      return;
+    }
+
+    if (action === "clear") {
+      if (!confirm("Clear all selections for this day?")) return;
+      const res = await fetch(`/api/planner/days/${dayId}/clear`, { method: "POST" });
+      if (!res.ok) {
+        console.error("Failed to clear planner day", dayId);
+        return;
+      }
+      const data = await res.json();
+      data.updates.forEach(applyDayUpdate);
+    }
+  });
 })();

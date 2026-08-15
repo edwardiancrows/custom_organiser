@@ -28,6 +28,12 @@
             <span class="planner-day-date mono">{{ day.date }}</span>
           </div>
 
+          <div class="planner-day-actions">
+            <button type="button" class="planner-day-action" data-action="copy-week" title="Copy this day's selections to the rest of this week">Copy &rarr; week</button>
+            <button type="button" class="planner-day-action" data-action="copy-next-week" title="Copy this day's selections to the same day next week">Copy &rarr; next wk</button>
+            <button type="button" class="planner-day-action planner-day-action-danger" data-action="clear" title="Clear all selections for this day">Clear day</button>
+          </div>
+
           <div class="planner-blocks">
             {% for block in day.blocks %}
             <div class="planner-block">
