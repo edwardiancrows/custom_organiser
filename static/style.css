@@ -610,6 +610,15 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 .outstanding-list { max-height: 320px; overflow-y: auto; }
 
+.outstanding-list {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.outstanding-list::-webkit-scrollbar {
+  display: none;
+}
+
 .outstanding-date {
   font-size: 0.72rem;
   color: var(--ink-faint);
@@ -820,6 +829,12 @@ button { font-family: var(--font-body); cursor: pointer; }
   gap: 1rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* old Edge/IE */
+}
+
+.planner-days-grid::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, new Edge */
 }
 
 .planner-day {
@@ -883,6 +898,15 @@ button { font-family: var(--font-body); cursor: pointer; }
   grid-template-columns: 3.5rem 0.6rem 1fr;
   align-items: center;
   gap: 0.4rem;
+}
+
+.planner-blocks {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.planner-blocks::-webkit-scrollbar {
+  display: none;
 }
 
 .planner-block-time {
@@ -963,6 +987,15 @@ button { font-family: var(--font-body); cursor: pointer; }
 .planner-todo-list {
   max-height: 140px;
   overflow-y: auto;
+}
+
+.planner-todo-list {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.planner-todo-list::-webkit-scrollbar {
+  display: none;
 }
 
 /* ---------------------------------------------------------------
