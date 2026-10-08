@@ -11,6 +11,8 @@
   </section>
 
   <nav class="planner-week-tabs">
+    <button type="button" class="planner-add-cat-btn" id="add-category-btn" title="Add a new category">+</button>
+    <button type="button" class="planner-add-cat-btn" id="manage-categories-btn" title="Manage categories">&#9881;</button>
     {% for week in weeks %}
     <button type="button" class="tab {{ 'active' if loop.first else '' }}" data-week-index="{{ loop.index0 }}">{{ week.label }}</button>
     {% endfor %}
@@ -87,6 +89,30 @@
   </div>
 
 </div>
+
+<dialog id="category-dialog" class="category-dialog">
+  <form method="dialog" id="category-form">
+    <h4>New category</h4>
+    <input type="text" id="category-name" placeholder="Name (e.g. Gym)" maxlength="40" required>
+    <label class="category-colour-row">
+      <span>Colour</span>
+      <input type="color" id="category-colour" value="#4a6121">
+    </label>
+    <p class="category-error" id="category-error" hidden></p>
+    <div class="category-actions">
+      <button type="button" id="category-cancel">Cancel</button>
+      <button type="submit">Add</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="manage-dialog" class="category-dialog">
+  <h4>Categories</h4>
+  <ul class="category-manage-list" id="category-manage-list"></ul>
+  <div class="category-actions">
+    <button type="button" id="manage-close">Done</button>
+  </div>
+</dialog>
 
 <script id="planner-categories" type="application/json">{{ categories | tojson }}</script>
 

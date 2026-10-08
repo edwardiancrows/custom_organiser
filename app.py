@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import calendar
 from datetime import date, datetime, timedelta
 from threading import Lock
@@ -194,7 +195,24 @@ CATEGORIES = [
     {"id": "dissertation", "label": "Dissertation",                 "color": "#372141"},
     {"id": "sunride",      "label": "Sunride",                      "color": "#412123"},
 ]
-CATEGORY_IDS = {c["id"] for c in CATEGORIES}
+
+
+PROTECTED_CATEGORY = "chill"  # the default for every empty block, so it can't be deleted
+
+
+def get_categories(data):
+    """The editable category list, stored in data.json under
+    "planner_categories". The first time it's needed it's seeded from the
+    built-in CATEGORIES above (plus any custom ones added before deleting
+    was possible), after which data.json is the source of truth -- so any
+    category, built-in or custom, can be deleted."""
+    if not data.get("planner_categories_seeded"):
+        custom = data.get("planner_categories", [])
+        data["planner_categories"] = [dict(c) for c in CATEGORIES] + custom
+        data["planner_categories_seeded"] = True
+    return data["planner_categories"]
+
+
 PLANNER_HOURS = list(range(6, 24))  # 06:00 .. 23:00 -> 18 one-hour blocks
 
 
@@ -375,9 +393,10 @@ def planner_page():
             weeks.append({"label": "This week" if w == 0 else "Next week", "days": days})
         # get_or_create_* above may have just created new todo/planner days
         # (e.g. the first time this week is viewed) -- persist those.
+        categories = get_categories(data)
         save_data(data)
 
-    return render_template("planner.html", categories=CATEGORIES, weeks=weeks)
+    return render_template("planner.html", categories=categories, weeks=weeks)
 
 
 # --------------------------------------------------------------------------
@@ -624,15 +643,67 @@ def add_month():
 # --------------------------------------------------------------------------
 # API: planner
 # --------------------------------------------------------------------------
+@app.route("/api/planner/categories", methods=["POST"])
+def add_planner_category():
+    body = request.get_json(force=True) or {}
+    label = (body.get("label") or "").strip()
+    color = (body.get("color") or "").strip()
+    if not label or len(label) > 40:
+        return jsonify({"error": "name required (max 40 chars)"}), 400
+    if not re.fullmatch(r"#[0-9a-fA-F]{6}", color):
+        return jsonify({"error": "invalid colour"}), 400
+
+    with _lock:
+        data = load_data()
+        existing = get_categories(data)
+        if label.lower() in {c["label"].lower() for c in existing}:
+            return jsonify({"error": "a category with that name already exists"}), 409
+        base = re.sub(r"[^a-z0-9]+", "_", label.lower()).strip("_") or "category"
+        ids = {c["id"] for c in existing}
+        cat_id, n = base, 2
+        while cat_id in ids:
+            cat_id = f"{base}_{n}"
+            n += 1
+        category = {"id": cat_id, "label": label, "color": color.lower()}
+        data.setdefault("planner_categories", []).append(category)
+        save_data(data)
+
+    return jsonify({"category": category}), 201
+
+
+@app.route("/api/planner/categories/<category_id>", methods=["DELETE"])
+def delete_planner_category(category_id):
+    if category_id == PROTECTED_CATEGORY:
+        return jsonify({"error": "the default category can't be deleted"}), 400
+
+    with _lock:
+        data = load_data()
+        categories = get_categories(data)
+        if category_id not in {c["id"] for c in categories}:
+            abort(404)
+        data["planner_categories"] = [c for c in categories if c["id"] != category_id]
+
+        # any block using it falls back to the default (an absent entry == chill)
+        reassigned = 0
+        for day in data.get("planner_days", []):
+            blocks = day.get("block_categories") or {}
+            for block_id in [b for b, cat in blocks.items() if cat == category_id]:
+                del blocks[block_id]
+                reassigned += 1
+        save_data(data)
+
+    return jsonify({"ok": True, "reassigned": reassigned})
+
+
 @app.route("/api/planner/blocks/<block_id>", methods=["PUT"])
 def update_planner_block(block_id):
     body = request.get_json(force=True) or {}
     category_id = body.get("category_id")
-    if category_id not in CATEGORY_IDS:
-        return jsonify({"error": "invalid category_id"}), 400
 
     with _lock:
         data = load_data()
+        if category_id not in {c["id"] for c in get_categories(data)}:
+            return jsonify({"error": "invalid category_id"}), 400
         planner_day = find_planner_day_by_block_id(data, block_id)
         if planner_day is None:
             abort(404)

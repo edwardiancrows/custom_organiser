@@ -1017,3 +1017,39 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .year-card { transition: none; }
 }
+
+
+/* ---- add-category button + dialog (planner) ---- */
+.planner-add-cat-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px dashed var(--accent-dim);
+  background: transparent;
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.planner-add-cat-btn:hover { background: var(--panel-alt); }
+
+.category-dialog {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  min-width: 260px;
+}
+.category-dialog::backdrop { background: rgba(0, 0, 0, 0.55); }
+.category-dialog h4 { margin: 0 0 0.75rem; }
+.category-dialog form { display: flex; flex-direction: column; gap: 0.75rem; }
+.category-colour-row { display: flex; align-items: center; justify-content: space-between; }
+.category-colour-row input[type="color"] { width: 3rem; height: 2rem; border: none; background: none; padding: 0; }
+.category-actions { display: flex; justify-content: flex-end; gap: 0.5rem; }
+.category-error { color: var(--red); margin: 0; font-size: 0.8rem; }
+
+.category-manage-list { list-style: none; margin: 0 0 0.75rem; padding: 0; max-height: 50vh; overflow-y: auto; }
+.category-manage-list li { display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0; border-bottom: 1px solid var(--line); }
+.category-manage-name { flex: 1; font-size: 0.85rem; }
+.category-manage-default { font-size: 0.7rem; color: var(--ink-faint); }

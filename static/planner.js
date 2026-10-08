@@ -31,6 +31,7 @@
   document.addEventListener("change", async (e) => {
     if (!e.target.classList.contains("planner-block-select")) return;
     const select = e.target;
+
     const blockId = select.dataset.blockId;
     const categoryId = select.value;
 
@@ -45,6 +46,105 @@
     if (!res.ok) {
       console.error("Failed to save planner block", blockId);
     }
+  });
+
+  // ---- add a new category (dialog) ----------------------------------------
+  const dialog = document.getElementById("category-dialog");
+  const nameInput = document.getElementById("category-name");
+  const colourInput = document.getElementById("category-colour");
+  const errorEl = document.getElementById("category-error");
+
+  function openCategoryDialog() {
+    nameInput.value = "";
+    errorEl.hidden = true;
+    dialog.showModal();
+    nameInput.focus();
+  }
+
+  document.getElementById("add-category-btn").addEventListener("click", () => openCategoryDialog());
+  document.getElementById("category-cancel").addEventListener("click", () => dialog.close());
+
+  document.getElementById("category-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const res = await fetch("/api/planner/categories", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ label: nameInput.value.trim(), color: colourInput.value }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      errorEl.textContent = data.error || "Couldn't add category.";
+      errorEl.hidden = false;
+      return;
+    }
+    const cat = data.category;
+    categories.push(cat);
+    colorMap[cat.id] = cat.color;
+
+    // add the new option to every dropdown
+    document.querySelectorAll(".planner-block-select").forEach((sel) => {
+      const opt = new Option(cat.label, cat.id);
+      opt.style.backgroundColor = cat.color;
+      sel.appendChild(opt);
+    });
+
+    dialog.close();
+  });
+
+  // ---- manage / delete categories -------------------------------------------
+  const manageDialog = document.getElementById("manage-dialog");
+  const manageList = document.getElementById("category-manage-list");
+
+  function renderManageList() {
+    manageList.innerHTML = categories
+      .map(
+        (c) => `
+        <li data-category-id="${escapeHtml(c.id)}">
+          <span class="planner-legend-dot" style="background:${c.color}"></span>
+          <span class="category-manage-name">${escapeHtml(c.label)}</span>
+          ${
+            c.id === "chill"
+              ? '<span class="category-manage-default">default</span>'
+              : '<button type="button" class="row-delete category-delete" title="Delete">&times;</button>'
+          }
+        </li>`
+      )
+      .join("");
+  }
+
+  document.getElementById("manage-categories-btn").addEventListener("click", () => {
+    renderManageList();
+    manageDialog.showModal();
+  });
+  document.getElementById("manage-close").addEventListener("click", () => manageDialog.close());
+
+  manageList.addEventListener("click", async (e) => {
+    const btn = e.target.closest(".category-delete");
+    if (!btn) return;
+    const li = btn.closest("li");
+    const id = li.dataset.categoryId;
+    const cat = categories.find((c) => c.id === id);
+    if (!cat) return;
+    if (!confirm(`Delete "${cat.label}"? Any blocks using it will go back to Chill.`)) return;
+
+    const res = await fetch(`/api/planner/categories/${encodeURIComponent(id)}`, { method: "DELETE" });
+    if (!res.ok) {
+      console.error("Failed to delete category", id);
+      return;
+    }
+
+    // blocks using it fall back to chill (matches what the server just did)
+    document.querySelectorAll(".planner-block-select").forEach((sel) => {
+      if (sel.value === id) sel.value = "chill";
+      const opt = sel.querySelector(`option[value="${CSS.escape(id)}"]`);
+      if (opt) opt.remove();
+      applySwatch(sel);
+    });
+
+    categories.splice(categories.findIndex((c) => c.id === id), 1);
+    delete colorMap[id];
+    document.querySelectorAll(".planner-day").forEach(updatePieForDay);
+    li.remove();
   });
 
   // ---- per-day pie chart + legend (pure CSS conic-gradient, no libs) --
