@@ -231,9 +231,20 @@
     const li = e.target.closest(".planner-todo-list .todo-task");
     if (!li) return;
     const taskId = li.dataset.taskId;
-    const res = await fetch(`/api/todo/tasks/${taskId}`, { method: "DELETE" });
+
+    // repeating task: ask whether to remove just this one or every instance
+    let scope = "one";
+    if (li.dataset.seriesId) {
+      scope = await TaskUI.askDeleteScope();
+      if (!scope) return;
+    }
+
+    const res = await fetch(`/api/todo/tasks/${taskId}?scope=${scope}`, { method: "DELETE" });
     if (!res.ok) return;
-    li.remove();
+    const data = await res.json();
+    (data.removed || [{ id: taskId }]).forEach((r) => {
+      document.querySelectorAll(`.planner-todo-list .todo-task[data-task-id="${r.id}"]`).forEach((el) => el.remove());
+    });
   });
 
   document.querySelectorAll(".planner-add-task-form").forEach((form) => {
@@ -247,26 +258,20 @@
       const res = await fetch(`/api/todo/days/${dayId}/tasks`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, due }),
+        body: JSON.stringify({ text, due, repeat: TaskUI.readRepeat(form) }),
       });
       if (!res.ok) return;
       const data = await res.json();
-      const task = data.task;
-      const list = form.previousElementSibling; // .planner-todo-list
 
-      const li = document.createElement("li");
-      li.className = "todo-task";
-      li.dataset.taskId = task.id;
-      li.innerHTML = `
-        <label class="todo-check">
-          <input type="checkbox" class="todo-done-toggle">
-          <span class="todo-task-text">${escapeHtml(task.text)}</span>
-        </label>
-        ${task.due ? `<span class="todo-due mono">due ${escapeHtml(task.due)}</span>` : ""}
-        <button class="row-delete todo-task-delete" title="Remove">&times;</button>
-      `;
-      list.appendChild(li);
+      // a repeating task creates tasks on other days too; show the ones
+      // whose day is on this page (this week / next week)
+      data.created.forEach(({ day_id, task }) => {
+        const dayForm = document.querySelector(`.planner-add-task-form[data-day-id="${day_id}"]`);
+        if (!dayForm) return;
+        dayForm.previousElementSibling.appendChild(TaskUI.buildTaskLi(task)); // .planner-todo-list
+      });
       form.reset();
+      TaskUI.resetRepeat(form);
     });
   });
 

@@ -20,11 +20,12 @@
   {% if outstanding %}
   <ul class="todo-task-list outstanding-list">
     {% for item in outstanding %}
-    <li class="todo-task" data-task-id="{{ item.task.id }}" data-day-id="{{ item.day.id }}">
+    <li class="todo-task" data-task-id="{{ item.task.id }}" data-day-id="{{ item.day.id }}"{% if item.task.series_id %} data-series-id="{{ item.task.series_id }}"{% endif %}>
       <label class="todo-check">
         <input type="checkbox" class="todo-done-toggle">
         <span class="todo-task-text">{{ item.task.text }}</span>
       </label>
+      {% if item.task.series_id %}<span class="todo-repeat" title="Repeating task">&#8635;</span>{% endif %}
       {% if item.task.due %}<span class="todo-due mono">due {{ item.task.due }}</span>{% endif %}
       <span class="outstanding-date mono">{{ item.day.date }}</span>
       <button class="row-delete todo-task-delete" title="Remove">&times;</button>
@@ -53,10 +54,12 @@
         </div>
         <ul class="todo-task-list">
           {% for task in day.tasks %}
-            <li class="todo-task {{ 'done' if task.done else '' }}" data-task-id="{{ task.id }}" data-day-id="{{ day.id }}">            <label class="todo-check">
+            <li class="todo-task {{ 'done' if task.done else '' }}" data-task-id="{{ task.id }}" data-day-id="{{ day.id }}"{% if task.series_id %} data-series-id="{{ task.series_id }}"{% endif %}>
+            <label class="todo-check">
               <input type="checkbox" class="todo-done-toggle" {{ 'checked' if task.done else '' }}>
               <span class="todo-task-text">{{ task.text }}</span>
             </label>
+            {% if task.series_id %}<span class="todo-repeat" title="Repeating task">&#8635;</span>{% endif %}
             {% if task.due %}<span class="todo-due mono">due {{ task.due }}</span>{% endif %}
             <button class="row-delete todo-task-delete" title="Remove">&times;</button>
           </li>

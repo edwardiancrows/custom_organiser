@@ -62,6 +62,75 @@ def find_task(day, task_id):
     return None
 
 
+# ---- repeating tasks ----------------------------------------------------
+# A repeating task is a "series" stored in data["task_series"]; every
+# occurrence is still a normal task in its day (so counters, the Unfinished
+# panel and the planner all work unchanged), tagged with its series_id.
+# Occurrences are created up to the last day that exists, and topped up
+# whenever a new month is added.
+REPEAT_UNITS = ("week", "month", "year")
+
+
+def parse_repeat(raw):
+    """Return (every, unit) from a request's "repeat" value, or None."""
+    if not raw:
+        return None
+    try:
+        every = int(raw.get("every", 1))
+    except (TypeError, ValueError):
+        raise ValueError("invalid repeat interval")
+    unit = raw.get("unit")
+    if unit not in REPEAT_UNITS or not 1 <= every <= 52:
+        raise ValueError("invalid repeat")
+    return every, unit
+
+
+def occurrence_date(start, every, unit, k):
+    """The k-th repeat after `start` (k=0 is start itself). Months/years keep
+    the original day-of-month and clamp to short months (31st -> 30th/28th)."""
+    if unit == "week":
+        return start + timedelta(weeks=every * k)
+    if unit == "month":
+        total = start.month - 1 + every * k
+        y, m = start.year + total // 12, total % 12 + 1
+    else:  # year
+        y, m = start.year + every * k, start.month
+    return date(y, m, min(start.day, calendar.monthrange(y, m)[1]))
+
+
+def fill_series(data, series_id):
+    """Create any missing occurrences of a series in days that exist.
+    Returns [{"day_id", "task"}] for what was created."""
+    series_id = int(series_id)  # JSON object keys are strings
+    series = data.get("task_series", {}).get(str(series_id))
+    days = data.get("todo_days", [])
+    if not series or not days:
+        return []
+    by_date = {d["date"]: d for d in days}
+    last = max(by_date)
+    through = series["generated_through"]
+    start = datetime.strptime(series["start"], "%Y-%m-%d").date()
+
+    created = []
+    k = 1
+    while True:
+        iso = occurrence_date(start, series["every"], series["unit"], k).isoformat()
+        if iso > last:
+            break
+        k += 1
+        if iso <= through:
+            continue  # already handled (possibly deleted on purpose)
+        day = by_date.get(iso)
+        if day is None:
+            continue
+        task = {"id": next_id(data), "text": series["text"], "due": series["due"],
+                "done": False, "series_id": series_id}
+        day["tasks"].append(task)
+        created.append({"day_id": day["id"], "task": task})
+    series["generated_through"] = max(through, last)
+    return created
+
+
 def find_day_and_task(data, task_id):
     for d in data.setdefault("todo_days", []):
         t = find_task(d, task_id)
@@ -583,6 +652,10 @@ def add_task(day_id):
     if not text:
         return jsonify({"error": "text is required"}), 400
     due = (body.get("due") or "").strip() or None
+    try:
+        repeat = parse_repeat(body.get("repeat"))
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
 
     with _lock:
         data = load_data()
@@ -591,9 +664,19 @@ def add_task(day_id):
             abort(404)
         task = {"id": next_id(data), "text": text, "due": due, "done": False}
         day["tasks"].append(task)
+        created = [{"day_id": day["id"], "task": task}]
+        if repeat:
+            every, unit = repeat
+            series_id = next_id(data)
+            data.setdefault("task_series", {})[str(series_id)] = {
+                "text": text, "due": due, "start": day["date"],
+                "every": every, "unit": unit, "generated_through": day["date"],
+            }
+            task["series_id"] = series_id
+            created += fill_series(data, series_id)
         save_data(data)
         summary = todo_summary(data)
-    return jsonify({"task": task, "summary": summary}), 201
+    return jsonify({"task": task, "created": created, "summary": summary}), 201
 
 
 @app.route("/api/todo/tasks/<int:task_id>", methods=["PUT"])
@@ -617,15 +700,28 @@ def update_task(task_id):
 
 @app.route("/api/todo/tasks/<int:task_id>", methods=["DELETE"])
 def delete_task(task_id):
+    # ?scope=one (default) removes just this task; ?scope=all also removes
+    # every other occurrence of the same repeating task.
+    scope = request.args.get("scope", "one")
     with _lock:
         data = load_data()
         day, task = find_day_and_task(data, task_id)
         if task is None:
             abort(404)
-        day["tasks"].remove(task)
+        removed = []
+        series_id = task.get("series_id")
+        if scope == "all" and series_id is not None:
+            for d in data.get("todo_days", []):
+                for t in [t for t in d["tasks"] if t.get("series_id") == series_id]:
+                    d["tasks"].remove(t)
+                    removed.append({"id": t["id"], "day_id": d["id"], "done": t["done"]})
+            data.get("task_series", {}).pop(str(series_id), None)
+        else:
+            day["tasks"].remove(task)
+            removed.append({"id": task["id"], "day_id": day["id"], "done": task["done"]})
         save_data(data)
         summary = todo_summary(data)
-    return jsonify({"summary": summary})
+    return jsonify({"summary": summary, "removed": removed})
 
 
 @app.route("/api/todo/months", methods=["POST"])
@@ -636,6 +732,8 @@ def add_month():
         start = compute_next_month_start(days)
         new_days = build_month_days(start, data)
         days.extend(new_days)
+        for sid in list(data.get("task_series", {})):
+            fill_series(data, sid)
         save_data(data)
     return jsonify({"added": len(new_days)}), 201
 

@@ -78,17 +78,26 @@
     if (!e.target.classList.contains("todo-task-delete")) return;
     const li = e.target.closest(".todo-task");
     const taskId = li.dataset.taskId;
-    const dayId = li.dataset.dayId;
-    const wasDone = li.classList.contains("done");
-    const inOutstanding = li.closest(".outstanding-list") !== null;
 
-    const res = await fetch(`/api/todo/tasks/${taskId}`, { method: "DELETE" });
+    // repeating task: ask whether to remove just this one or every instance
+    let scope = "one";
+    if (li.dataset.seriesId) {
+      scope = await TaskUI.askDeleteScope();
+      if (!scope) return;
+    }
+
+    const res = await fetch(`/api/todo/tasks/${taskId}?scope=${scope}`, { method: "DELETE" });
     if (!res.ok) return;
-
-    document.querySelectorAll(`.todo-task[data-task-id="${taskId}"]`).forEach((el) => el.remove());
-    if (inOutstanding && !wasDone) updateOutstandingCount(-1);
-    if (dayId) shiftMonthCounts(dayId, wasDone ? -1 : 0, -1);
     const data = await res.json();
+
+    (data.removed || []).forEach((r) => {
+      const inOutstanding = document.querySelector(
+        `.outstanding-list .todo-task[data-task-id="${r.id}"]`
+      );
+      if (inOutstanding && !r.done) updateOutstandingCount(-1);
+      document.querySelectorAll(`.todo-task[data-task-id="${r.id}"]`).forEach((el) => el.remove());
+      shiftMonthCounts(r.day_id, r.done ? -1 : 0, -1);
+    });
     applyGlobalSummary(data.summary);
   });
 
@@ -96,7 +105,6 @@
   document.querySelectorAll(".add-task-form").forEach((addForm) => {
     const dayEl = addForm.closest(".todo-day");
     const dayId = dayEl.dataset.dayId;
-    const list = dayEl.querySelector(".todo-task-list");
 
     addForm.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -107,28 +115,21 @@
       const res = await fetch(`/api/todo/days/${dayId}/tasks`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, due }),
+        body: JSON.stringify({ text, due, repeat: TaskUI.readRepeat(addForm) }),
       });
       if (!res.ok) return;
       const data = await res.json();
-      const task = data.task;
 
-      const li = document.createElement("li");
-      li.className = "todo-task";
-      li.dataset.taskId = task.id;
-      li.dataset.dayId = dayId;
-      li.innerHTML = `
-        <label class="todo-check">
-          <input type="checkbox" class="todo-done-toggle">
-          <span class="todo-task-text">${escapeHtml(task.text)}</span>
-        </label>
-        ${task.due ? `<span class="todo-due mono">due ${escapeHtml(task.due)}</span>` : ""}
-        <button class="row-delete todo-task-delete" title="Remove">&times;</button>
-      `;
-      list.appendChild(li);
-      shiftMonthCounts(dayId, 0, 1);
+      // a repeating task creates several tasks across different days
+      data.created.forEach(({ day_id, task }) => {
+        const targetDay = document.querySelector(`.todo-day[data-day-id="${day_id}"]`);
+        if (!targetDay) return;
+        targetDay.querySelector(".todo-task-list").appendChild(TaskUI.buildTaskLi(task, day_id));
+        shiftMonthCounts(day_id, 0, 1);
+      });
       applyGlobalSummary(data.summary);
       addForm.reset();
+      TaskUI.resetRepeat(addForm);
     });
   });
 

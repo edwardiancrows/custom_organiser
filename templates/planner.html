@@ -64,11 +64,12 @@
             <h4>To-dos</h4>
             <ul class="todo-task-list planner-todo-list">
               {% for task in day.todos %}
-              <li class="todo-task {{ 'done' if task.done else '' }}" data-task-id="{{ task.id }}">
+              <li class="todo-task {{ 'done' if task.done else '' }}" data-task-id="{{ task.id }}"{% if task.series_id %} data-series-id="{{ task.series_id }}"{% endif %}>
                 <label class="todo-check">
                   <input type="checkbox" class="todo-done-toggle" {{ 'checked' if task.done else '' }}>
                   <span class="todo-task-text">{{ task.text }}</span>
                 </label>
+                {% if task.series_id %}<span class="todo-repeat" title="Repeating task">&#8635;</span>{% endif %}
                 {% if task.due %}<span class="todo-due mono">due {{ task.due }}</span>{% endif %}
                 <button class="row-delete todo-task-delete" title="Remove">&times;</button>
               </li>
